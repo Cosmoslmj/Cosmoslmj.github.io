@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>小君前端学习</title>
+  <subtitle>一直在路上。</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://Cosmoslmj.com/"/>
+  <updated>2017-06-05T05:52:08.218Z</updated>
+  <id>http://Cosmoslmj.com/</id>
+  
+  <author>
+    <name>Cosmos</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML5新增与删除的标签</title>
+    <link href="http://Cosmoslmj.com/2017/06/05/HTML5%E6%96%B0%E5%A2%9E%E7%9A%84%E6%A0%87%E7%AD%BE/"/>
+    <id>http://Cosmoslmj.com/2017/06/05/HTML5新增的标签/</id>
+    <published>2017-06-05T05:05:34.000Z</published>
+    <updated>2017-06-05T05:52:08.218Z</updated>
+    
+    <content type="html"><![CDATA[<ul>
+<li><p>新增标签          </p>
+<pre><code>结构标签（相当于div使用）
+header:定义页面的头部
+nav:导航条
+aside:定义页面内容的侧边栏
+article: 定义文章段落
+hgroup:定义文件中某块区域的相关信息
+
+&lt;hgroup&gt;
+&lt;h2&gt;&lt;/h2&gt;   
+&lt;/hgroup&gt;        
+footer:定义页面的尾部
+dialog:定义一个对话框
+figure:可以用来包裹canvas,video等多媒体标签，定义一组媒体内容和它们的标题
+figcaption:定义figure标签内定义媒体的标题
+
+建议：
+关于嵌套：
+header/section/footer/aside/article/footer这几个标签最好不要嵌套在里面
+使用层级：
+    写在外层：header section footer
+    写在内层：aside /article /figure /hgroup /nav
+</code></pre><a id="more"></a>
+<pre><code>媒体标签
+video： 定义视频
+    属性：autoplay:是否自动播放
+               controls:是否展示控制器
+               css样式可以控制视频外框显示的宽高
+               里面可以有source标签
+audio:定义一个音频
+    属性：autoplay:不写默认不自动，autoplay=&quot;autoplay&quot;
+               loop:是否重复，也可以设置重复的次数 loop=&apos;-1&apos;无止尽重复 loop=&apos;5&apos; 重复5次
+               controls:是否显示控制器，默认不显示
+               里面可以有source标签
+ source:定义媒体资源
+</code></pre></li>
+</ul>
+<figure class="highlight vbscript-html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">   &lt;audio&gt;</div><div class="line">    &lt;source src='音频资源' type='audio/转码格式'&gt;</div><div class="line">&lt;/audio&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>删除标签</li>
+</ul>
+<p>1、可以使用css代替的标签</p>
+<p>删除basefont,big,center,font,s,strike,tt,u这些纯表现的元素,html5中提倡把画面展示性功能放在css中统一编辑。。</p>
+<p>2、html5不再使用frame</p>
+<p>不再用frame,noframes和frameset，这些标签对可用性产生负面影响。HTML5中不支持frame框架，只支持iframe框架，或者用服务器方创建的由多个页面组成的符合页面的形式，删除以上这三个标签。</p>
+<p>3、只有个别浏览器支持的标签</p>
+<p>bgsound背景音乐，blink文字闪烁，marquee文字滚动,applet</p>
+<p>4、其他不常用的标签</p>
+<p>ul替代dir</p>
+<p>pre替代listing</p>
+<p>code替代xmp</p>
+<p>ruby替代rb</p>
+<p>abbr替代acronym</p>
+<p>废除isindex使用form与input相结合的方式替代。</p>
+<p>废除listing使用pre替代</p>
+<p>废除nextid使用guids</p>
+<p>废除plaintex使用“text/plian”（无格式正文）MIME类型替代。</p>
+<p>三、重新定义的html标签</p>
+<p><code>&lt;b&gt;</code>：代表内联文本，通常是粗体，没有传递表示重要的意思。</p>
+<p><code>&lt;i&gt;</code>：代表内联文本，通常斜体，没有传递表示重要的意思。</p>
+<p><code>&lt;dd&gt;</code>:可以和details与figure一同使用，定义包含文本，djalog也可用</p>
+<p><code>&lt;dt&gt;</code>：可以和details与figure一同使用，汇总细节，dialog也可用</p>
+<p><code>&lt;menu&gt;</code>：重新定义用户界面的菜单，配合commond或者menuitem使用</p>
+<p><code>&lt;small&gt;</code>：表示小字体，例如打印注释或者法律条款</p>
+<p><code>&lt;strong&gt;</code>：表示重要性而不是强调符号</p>
+<p>新标签进行布局意义：<br>1.提升语义化特性和网页的质量<br>2.减少了用于css调用的class和id属性<br>3.对搜索引擎更友好</p>
+<ul>
+<li>资源链接<br><a href="http://www.ibm.com/developerworks/cn/web/1212_zhouxiang_deepintohtml5/" target="_blank" rel="external">http://www.ibm.com/developerworks/cn/web/1212_zhouxiang_deepintohtml5/</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;新增标签          &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;结构标签（相当于div使用）
+header:定义页面的头部
+nav:导航条
+aside:定义页面内容的侧边栏
+article: 定义文章段落
+hgroup:定义文件中某块区域的相关信息
+
+&amp;lt;hgroup&amp;gt;
+&amp;lt;h2&amp;gt;&amp;lt;/h2&amp;gt;   
+&amp;lt;/hgroup&amp;gt;        
+footer:定义页面的尾部
+dialog:定义一个对话框
+figure:可以用来包裹canvas,video等多媒体标签，定义一组媒体内容和它们的标题
+figcaption:定义figure标签内定义媒体的标题
+
+建议：
+关于嵌套：
+header/section/footer/aside/article/footer这几个标签最好不要嵌套在里面
+使用层级：
+    写在外层：header section footer
+    写在内层：aside /article /figure /hgroup /nav
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+      <category term="html" scheme="http://Cosmoslmj.com/categories/html/"/>
+    
+    
+      <category term="基础" scheme="http://Cosmoslmj.com/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="html5" scheme="http://Cosmoslmj.com/tags/html5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常见的html标签</title>
+    <link href="http://Cosmoslmj.com/2017/06/05/%E5%B8%B8%E8%A7%81%E7%9A%84html%E6%A0%87%E7%AD%BE/"/>
+    <id>http://Cosmoslmj.com/2017/06/05/常见的html标签/</id>
+    <published>2017-06-05T03:48:48.000Z</published>
+    <updated>2017-06-05T05:00:56.386Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight vbscript-html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">## 常见的标签</div><div class="line">&lt;html&gt;文本描述网页定义整个html文档 &lt;/html&gt;</div><div class="line">&lt;body&gt; 定义html文档的主体部分 &lt;/body&gt;</div><div class="line">&lt;head&gt; &lt;/head&gt;</div><div class="line">&lt;title&gt;  项目的标题，会显示在浏览器上方  &lt;/title&gt;</div><div class="line">&lt;link rel="stylesheet" type="text/css" href="theme.css" /&gt;  链接CSS样式</div><div class="line">&lt;link rel="shortcut icon" href="favicon.ico"/&gt; 链接项目图标</div><div class="line">&lt;meta name="description" content="描述内容"/&gt;</div><div class="line">&lt;meta name="keywords" content="关键字"/&gt;</div><div class="line">&lt;meta name="author" content="作者"/&gt;</div><div class="line">&lt;meta http-equiv="refresh" content="0";url=""&gt; 经过自定义的时间跳转到url设置的相应地址页面</div><div class="line">&lt;script src=""&gt;链接脚本文件&lt;/script&gt;</div><div class="line">&lt;div&gt; 定义区域块 &lt;/div&gt;</div><div class="line">&lt;span&gt; 定义行内小区域块 &lt;/span&gt;</div><div class="line">&lt;a href="www.google.com.hk"&gt; 666 &lt;/a&gt; 跳转到指定链接地址</div><div class="line">&lt;img src="image/open.jpg"/&gt;</div><div class="line">&lt;button type="button"&gt;点我，我是按钮&lt;button&gt;</div><div class="line">&lt;ul&gt;&lt;li&gt;我是无序列表&lt;/li&gt;&lt;/ul&gt;</div><div class="line">&lt;ol&gt;&lt;li&gt;我是有序列表&lt;/li&gt;&lt;/ol&gt;</div><div class="line">&lt;h1&gt;标题1，我显示出来默认最大&lt;/h1&gt;</div><div class="line">&lt;h2&gt;标题2&lt;/h2&gt;</div><div class="line">~</div><div class="line">~</div><div class="line">&lt;h6&gt;标题6&lt;/h6&gt;</div><div class="line">&lt;form&gt;用于创建HTML表单，里面可以是 input 元素，比如文本字段、复选框、单选框、提交按钮，还可以包含 menus、textarea、fieldset、legend 和 label 元素&lt;/form&gt;</div><div class="line">&lt;input type="submit" value="提交"/&gt;</div><div class="line">&lt;input type="text" value="文本"/&gt;</div><div class="line">。。。</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>注意！！！<br>&lt;!DOCTYPE&gt; 不是 HTML 标签。它为浏览器提供一项信息（声明），即 HTML 是用什么版本编写的</p>
+<p>一般书写格式：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;<span class="selector-tag">html</span> lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;拉勾网-最专业的互联网招聘平台_找工作_招聘_人才网_求职&lt;/title&gt;</div><div class="line">    &lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"css/base.css"</span>&gt;</div><div class="line">    &lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"css/mycss.css"</span>&gt;</div><div class="line">    &lt;link rel=<span class="string">"shortcut icon"</span> href=<span class="string">"images/favicon.ico"</span>&gt;</div><div class="line">    &lt;meta name=<span class="string">"keywords"</span> <span class="attribute">content</span>=<span class="string">"互联网招聘,找工作,招聘网,人才网"</span> &gt;</div><div class="line">    &lt;meta name=<span class="string">"description"</span> <span class="attribute">content</span>=<span class="string">"拉勾网是最权威的互联网行业招聘网站,提供全国真实的互联网招聘信息,工资不面议当面谈,找工作,招聘网,寻人才就来拉勾网,互联网行业找工作首选拉勾网"</span> &gt;</div><div class="line">    &lt;style&gt;如果上面不调用外部样式的话，这里可以书写样式，一般建议用外部样式&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">"lg_header"</span>&gt;</div><div class="line">    &lt;<span class="selector-tag">div</span> class=<span class="string">"lg_tbar"</span>&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    ...</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;script&gt;这里写脚本代码，也可以在上面&lt;head&gt;里面链接外部文件</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight vbscript-html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;## 常见的标签&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;html&amp;gt;文本描述网页定义整个html文档 &amp;lt;/html&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;body&amp;gt; 定义html文档的主体部分 &amp;lt;/body&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;head&amp;gt; &amp;lt;/head&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;title&amp;gt;  项目的标题，会显示在浏览器上方  &amp;lt;/title&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;theme.css&quot; /&amp;gt;  链接CSS样式&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;link rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot;/&amp;gt; 链接项目图标&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;meta name=&quot;description&quot; content=&quot;描述内容&quot;/&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;meta name=&quot;keywords&quot; content=&quot;关键字&quot;/&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;meta name=&quot;author&quot; content=&quot;作者&quot;/&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;meta http-equiv=&quot;refresh&quot; content=&quot;0&quot;;url=&quot;&quot;&amp;gt; 经过自定义的时间跳转到url设置的相应地址页面&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;script src=&quot;&quot;&amp;gt;链接脚本文件&amp;lt;/script&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;div&amp;gt; 定义区域块 &amp;lt;/div&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;span&amp;gt; 定义行内小区域块 &amp;lt;/span&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;a href=&quot;www.google.com.hk&quot;&amp;gt; 666 &amp;lt;/a&amp;gt; 跳转到指定链接地址&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;img src=&quot;image/open.jpg&quot;/&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;button type=&quot;button&quot;&amp;gt;点我，我是按钮&amp;lt;button&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;我是无序列表&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;ol&amp;gt;&amp;lt;li&amp;gt;我是有序列表&amp;lt;/li&amp;gt;&amp;lt;/ol&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;h1&amp;gt;标题1，我显示出来默认最大&amp;lt;/h1&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;h2&amp;gt;标题2&amp;lt;/h2&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;~&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;~&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;h6&amp;gt;标题6&amp;lt;/h6&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;form&amp;gt;用于创建HTML表单，里面可以是 input 元素，比如文本字段、复选框、单选框、提交按钮，还可以包含 menus、textarea、fieldset、legend 和 label 元素&amp;lt;/form&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;input type=&quot;submit&quot; value=&quot;提交&quot;/&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;input type=&quot;text&quot; value=&quot;文本&quot;/&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;。。。&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="html" scheme="http://Cosmoslmj.com/categories/html/"/>
+    
+    
+      <category term="html" scheme="http://Cosmoslmj.com/tags/html/"/>
+    
+      <category term="基础" scheme="http://Cosmoslmj.com/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>越努力，越幸运</title>
+    <link href="http://Cosmoslmj.com/2017/06/02/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://Cosmoslmj.com/2017/06/02/欢迎来到我的博客/</id>
+    <published>2017-06-02T10:14:39.000Z</published>
+    <updated>2017-06-05T05:33:36.250Z</updated>
+    
+    <content type="html"><![CDATA[<p>记载点滴~从心开始</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记载点滴~从心开始&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="life" scheme="http://Cosmoslmj.com/categories/life/"/>
+    
+    
+      <category term="life" scheme="http://Cosmoslmj.com/tags/life/"/>
+    
+  </entry>
+  
+</feed>
