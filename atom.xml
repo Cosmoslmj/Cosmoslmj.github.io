@@ -41,9 +41,9 @@
       <category term="html" scheme="http://cosmoslmj.com/categories/html/"/>
     
     
-      <category term="html" scheme="http://cosmoslmj.com/tags/html/"/>
-    
       <category term="基础" scheme="http://cosmoslmj.com/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="html" scheme="http://cosmoslmj.com/tags/html/"/>
     
   </entry>
   
@@ -165,9 +165,9 @@ header/section/footer/aside/article/footer这几个标签最好不要嵌套在�
       <category term="html" scheme="http://cosmoslmj.com/categories/html/"/>
     
     
-      <category term="基础" scheme="http://cosmoslmj.com/tags/%E5%9F%BA%E7%A1%80/"/>
-    
       <category term="html5" scheme="http://cosmoslmj.com/tags/html5/"/>
+    
+      <category term="基础" scheme="http://cosmoslmj.com/tags/%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -194,9 +194,9 @@ header/section/footer/aside/article/footer这几个标签最好不要嵌套在�
       <category term="html" scheme="http://cosmoslmj.com/categories/html/"/>
     
     
-      <category term="html" scheme="http://cosmoslmj.com/tags/html/"/>
-    
       <category term="基础" scheme="http://cosmoslmj.com/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="html" scheme="http://cosmoslmj.com/tags/html/"/>
     
   </entry>
   
