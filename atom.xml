@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>小君前端学习</title>
   <subtitle>一直在路上。</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/Blog/atom.xml" rel="self"/>
   
-  <link href="http://Cosmoslmj.com/"/>
-  <updated>2017-06-05T05:52:08.218Z</updated>
-  <id>http://Cosmoslmj.com/</id>
+  <link href="http://Cosmoslmj.com/Blog/"/>
+  <updated>2017-06-06T08:26:39.613Z</updated>
+  <id>http://Cosmoslmj.com/Blog/</id>
   
   <author>
     <name>Cosmos</name>
@@ -16,11 +16,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>常见的行内元素、块级元素与空元素</title>
+    <link href="http://Cosmoslmj.com/Blog/2017/06/06/%E5%B8%B8%E8%A7%81%E7%9A%84%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E3%80%81%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E4%B8%8E%E7%A9%BA%E5%85%83%E7%B4%A0/"/>
+    <id>http://Cosmoslmj.com/Blog/2017/06/06/常见的行内元素、块级元素与空元素/</id>
+    <published>2017-06-06T08:26:39.000Z</published>
+    <updated>2017-06-06T08:26:39.613Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>HTML5新增与删除的标签</title>
-    <link href="http://Cosmoslmj.com/2017/06/05/HTML5%E6%96%B0%E5%A2%9E%E7%9A%84%E6%A0%87%E7%AD%BE/"/>
-    <id>http://Cosmoslmj.com/2017/06/05/HTML5新增的标签/</id>
+    <link href="http://Cosmoslmj.com/Blog/2017/06/05/HTML5%E6%96%B0%E5%A2%9E%E7%9A%84%E6%A0%87%E7%AD%BE/"/>
+    <id>http://Cosmoslmj.com/Blog/2017/06/05/HTML5新增的标签/</id>
     <published>2017-06-05T05:05:34.000Z</published>
-    <updated>2017-06-05T05:52:08.218Z</updated>
+    <updated>2017-06-06T08:23:40.632Z</updated>
     
     <content type="html"><![CDATA[<ul>
 <li><p>新增标签          </p>
@@ -61,7 +75,14 @@ audio:定义一个音频
 </code></pre></li>
 </ul>
 <figure class="highlight vbscript-html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">   &lt;audio&gt;</div><div class="line">    &lt;source src='音频资源' type='audio/转码格式'&gt;</div><div class="line">&lt;/audio&gt;</div></pre></td></tr></table></figure>
-<ul>
+<pre><code>新的表单控件
+ calendar、
+ date、
+ time、
+ email、
+ url、
+ search
+</code></pre><ul>
 <li>删除标签</li>
 </ul>
 <p>1、可以使用css代替的标签</p>
@@ -123,19 +144,19 @@ header/section/footer/aside/article/footer这几个标签最好不要嵌套在�
     
     </summary>
     
-      <category term="html" scheme="http://Cosmoslmj.com/categories/html/"/>
+      <category term="html" scheme="http://Cosmoslmj.com/Blog/categories/html/"/>
     
     
-      <category term="基础" scheme="http://Cosmoslmj.com/tags/%E5%9F%BA%E7%A1%80/"/>
+      <category term="html5" scheme="http://Cosmoslmj.com/Blog/tags/html5/"/>
     
-      <category term="html5" scheme="http://Cosmoslmj.com/tags/html5/"/>
+      <category term="基础" scheme="http://Cosmoslmj.com/Blog/tags/%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
     <title>常见的html标签</title>
-    <link href="http://Cosmoslmj.com/2017/06/05/%E5%B8%B8%E8%A7%81%E7%9A%84html%E6%A0%87%E7%AD%BE/"/>
-    <id>http://Cosmoslmj.com/2017/06/05/常见的html标签/</id>
+    <link href="http://Cosmoslmj.com/Blog/2017/06/05/%E5%B8%B8%E8%A7%81%E7%9A%84html%E6%A0%87%E7%AD%BE/"/>
+    <id>http://Cosmoslmj.com/Blog/2017/06/05/常见的html标签/</id>
     <published>2017-06-05T03:48:48.000Z</published>
     <updated>2017-06-05T05:00:56.386Z</updated>
     
@@ -152,19 +173,19 @@ header/section/footer/aside/article/footer这几个标签最好不要嵌套在�
     
     </summary>
     
-      <category term="html" scheme="http://Cosmoslmj.com/categories/html/"/>
+      <category term="html" scheme="http://Cosmoslmj.com/Blog/categories/html/"/>
     
     
-      <category term="html" scheme="http://Cosmoslmj.com/tags/html/"/>
+      <category term="基础" scheme="http://Cosmoslmj.com/Blog/tags/%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="基础" scheme="http://Cosmoslmj.com/tags/%E5%9F%BA%E7%A1%80/"/>
+      <category term="html" scheme="http://Cosmoslmj.com/Blog/tags/html/"/>
     
   </entry>
   
   <entry>
     <title>越努力，越幸运</title>
-    <link href="http://Cosmoslmj.com/2017/06/02/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://Cosmoslmj.com/2017/06/02/欢迎来到我的博客/</id>
+    <link href="http://Cosmoslmj.com/Blog/2017/06/02/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://Cosmoslmj.com/Blog/2017/06/02/欢迎来到我的博客/</id>
     <published>2017-06-02T10:14:39.000Z</published>
     <updated>2017-06-05T05:33:36.250Z</updated>
     
@@ -178,10 +199,10 @@ header/section/footer/aside/article/footer这几个标签最好不要嵌套在�
     
     </summary>
     
-      <category term="life" scheme="http://Cosmoslmj.com/categories/life/"/>
+      <category term="life" scheme="http://Cosmoslmj.com/Blog/categories/life/"/>
     
     
-      <category term="life" scheme="http://Cosmoslmj.com/tags/life/"/>
+      <category term="life" scheme="http://Cosmoslmj.com/Blog/tags/life/"/>
     
   </entry>
   
