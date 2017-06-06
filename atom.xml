@@ -5,7 +5,7 @@
   <link href="/Blog/atom.xml" rel="self"/>
   
   <link href="http://Cosmoslmj.com/Blog/"/>
-  <updated>2017-06-06T08:26:39.613Z</updated>
+  <updated>2017-06-06T14:03:49.990Z</updated>
   <id>http://Cosmoslmj.com/Blog/</id>
   
   <author>
@@ -20,12 +20,30 @@
     <link href="http://Cosmoslmj.com/Blog/2017/06/06/%E5%B8%B8%E8%A7%81%E7%9A%84%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E3%80%81%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E4%B8%8E%E7%A9%BA%E5%85%83%E7%B4%A0/"/>
     <id>http://Cosmoslmj.com/Blog/2017/06/06/常见的行内元素、块级元素与空元素/</id>
     <published>2017-06-06T08:26:39.000Z</published>
-    <updated>2017-06-06T08:26:39.613Z</updated>
+    <updated>2017-06-06T14:03:49.990Z</updated>
+    
+    <content type="html"><![CDATA[<ul>
+<li>常见的块级元素： div ul li ol dl dd dt h1~h6 p table blockquote</li>
+<li>常见的行内元素:    a b span img input select strong label em button textarea td</li>
+<li>常见的空元素：     br hr img input link meta</li>
+<li>鲜为人知的空元素：  area base col command embed source</li>
+</ul>
+]]></content>
     
     <summary type="html">
     
+      &lt;ul&gt;
+&lt;li&gt;常见的块级元素： div ul li ol dl dd dt h1~h6 p table blockquote&lt;/li&gt;
+&lt;li&gt;常见的行内元素:    a b span img input select strong label em button texta
+    
     </summary>
     
+      <category term="html" scheme="http://Cosmoslmj.com/Blog/categories/html/"/>
+    
+    
+      <category term="基础" scheme="http://Cosmoslmj.com/Blog/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="html" scheme="http://Cosmoslmj.com/Blog/tags/html/"/>
     
   </entry>
   
@@ -34,7 +52,7 @@
     <link href="http://Cosmoslmj.com/Blog/2017/06/05/HTML5%E6%96%B0%E5%A2%9E%E7%9A%84%E6%A0%87%E7%AD%BE/"/>
     <id>http://Cosmoslmj.com/Blog/2017/06/05/HTML5新增的标签/</id>
     <published>2017-06-05T05:05:34.000Z</published>
-    <updated>2017-06-06T08:23:40.632Z</updated>
+    <updated>2017-06-06T14:03:22.665Z</updated>
     
     <content type="html"><![CDATA[<ul>
 <li><p>新增标签          </p>
@@ -158,7 +176,7 @@ header/section/footer/aside/article/footer这几个标签最好不要嵌套在�
     <link href="http://Cosmoslmj.com/Blog/2017/06/05/%E5%B8%B8%E8%A7%81%E7%9A%84html%E6%A0%87%E7%AD%BE/"/>
     <id>http://Cosmoslmj.com/Blog/2017/06/05/常见的html标签/</id>
     <published>2017-06-05T03:48:48.000Z</published>
-    <updated>2017-06-05T05:00:56.386Z</updated>
+    <updated>2017-06-06T14:03:19.318Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight vbscript-html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">## 常见的标签</div><div class="line">&lt;html&gt;文本描述网页定义整个html文档 &lt;/html&gt;</div><div class="line">&lt;body&gt; 定义html文档的主体部分 &lt;/body&gt;</div><div class="line">&lt;head&gt; &lt;/head&gt;</div><div class="line">&lt;title&gt;  项目的标题，会显示在浏览器上方  &lt;/title&gt;</div><div class="line">&lt;link rel="stylesheet" type="text/css" href="theme.css" /&gt;  链接CSS样式</div><div class="line">&lt;link rel="shortcut icon" href="favicon.ico"/&gt; 链接项目图标</div><div class="line">&lt;meta name="description" content="描述内容"/&gt;</div><div class="line">&lt;meta name="keywords" content="关键字"/&gt;</div><div class="line">&lt;meta name="author" content="作者"/&gt;</div><div class="line">&lt;meta http-equiv="refresh" content="0";url=""&gt; 经过自定义的时间跳转到url设置的相应地址页面</div><div class="line">&lt;script src=""&gt;链接脚本文件&lt;/script&gt;</div><div class="line">&lt;div&gt; 定义区域块 &lt;/div&gt;</div><div class="line">&lt;span&gt; 定义行内小区域块 &lt;/span&gt;</div><div class="line">&lt;a href="www.google.com.hk"&gt; 666 &lt;/a&gt; 跳转到指定链接地址</div><div class="line">&lt;img src="image/open.jpg"/&gt;</div><div class="line">&lt;button type="button"&gt;点我，我是按钮&lt;button&gt;</div><div class="line">&lt;ul&gt;&lt;li&gt;我是无序列表&lt;/li&gt;&lt;/ul&gt;</div><div class="line">&lt;ol&gt;&lt;li&gt;我是有序列表&lt;/li&gt;&lt;/ol&gt;</div><div class="line">&lt;h1&gt;标题1，我显示出来默认最大&lt;/h1&gt;</div><div class="line">&lt;h2&gt;标题2&lt;/h2&gt;</div><div class="line">~</div><div class="line">~</div><div class="line">&lt;h6&gt;标题6&lt;/h6&gt;</div><div class="line">&lt;form&gt;用于创建HTML表单，里面可以是 input 元素，比如文本字段、复选框、单选框、提交按钮，还可以包含 menus、textarea、fieldset、legend 和 label 元素&lt;/form&gt;</div><div class="line">&lt;input type="submit" value="提交"/&gt;</div><div class="line">&lt;input type="text" value="文本"/&gt;</div><div class="line">。。。</div></pre></td></tr></table></figure>
 <a id="more"></a>

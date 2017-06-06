@@ -3,7 +3,14 @@
   <entry>
     <title><![CDATA[常见的行内元素、块级元素与空元素]]></title>
     <url>%2FBlog%2F2017%2F06%2F06%2F%E5%B8%B8%E8%A7%81%E7%9A%84%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E3%80%81%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E4%B8%8E%E7%A9%BA%E5%85%83%E7%B4%A0%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[常见的块级元素： div ul li ol dl dd dt h1~h6 p table blockquote 常见的行内元素: a b span img input select strong label em button textarea td 常见的空元素： br hr img input link meta 鲜为人知的空元素： area base col command embed source]]></content>
+      <categories>
+        <category>html</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+        <tag>html</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[HTML5新增与删除的标签]]></title>
