@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>小君前端学习</title>
   <subtitle>一直在路上。</subtitle>
-  <link href="/Blog/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
-  <link href="http://Cosmoslmj.com/Blog/"/>
+  <link href="http://cosmoslmj.com/"/>
   <updated>2017-06-06T14:03:49.990Z</updated>
-  <id>http://Cosmoslmj.com/Blog/</id>
+  <id>http://cosmoslmj.com/</id>
   
   <author>
     <name>Cosmos</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>常见的行内元素、块级元素与空元素</title>
-    <link href="http://Cosmoslmj.com/Blog/2017/06/06/%E5%B8%B8%E8%A7%81%E7%9A%84%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E3%80%81%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E4%B8%8E%E7%A9%BA%E5%85%83%E7%B4%A0/"/>
-    <id>http://Cosmoslmj.com/Blog/2017/06/06/常见的行内元素、块级元素与空元素/</id>
+    <link href="http://cosmoslmj.com/2017/06/06/%E5%B8%B8%E8%A7%81%E7%9A%84%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E3%80%81%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E4%B8%8E%E7%A9%BA%E5%85%83%E7%B4%A0/"/>
+    <id>http://cosmoslmj.com/2017/06/06/常见的行内元素、块级元素与空元素/</id>
     <published>2017-06-06T08:26:39.000Z</published>
     <updated>2017-06-06T14:03:49.990Z</updated>
     
@@ -38,19 +38,19 @@
     
     </summary>
     
-      <category term="html" scheme="http://Cosmoslmj.com/Blog/categories/html/"/>
+      <category term="html" scheme="http://cosmoslmj.com/categories/html/"/>
     
     
-      <category term="基础" scheme="http://Cosmoslmj.com/Blog/tags/%E5%9F%BA%E7%A1%80/"/>
+      <category term="基础" scheme="http://cosmoslmj.com/tags/%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="html" scheme="http://Cosmoslmj.com/Blog/tags/html/"/>
+      <category term="html" scheme="http://cosmoslmj.com/tags/html/"/>
     
   </entry>
   
   <entry>
     <title>HTML5新增与删除的标签</title>
-    <link href="http://Cosmoslmj.com/Blog/2017/06/05/HTML5%E6%96%B0%E5%A2%9E%E7%9A%84%E6%A0%87%E7%AD%BE/"/>
-    <id>http://Cosmoslmj.com/Blog/2017/06/05/HTML5新增的标签/</id>
+    <link href="http://cosmoslmj.com/2017/06/05/HTML5%E6%96%B0%E5%A2%9E%E7%9A%84%E6%A0%87%E7%AD%BE/"/>
+    <id>http://cosmoslmj.com/2017/06/05/HTML5新增的标签/</id>
     <published>2017-06-05T05:05:34.000Z</published>
     <updated>2017-06-06T14:03:22.665Z</updated>
     
@@ -162,19 +162,19 @@ header/section/footer/aside/article/footer这几个标签最好不要嵌套在�
     
     </summary>
     
-      <category term="html" scheme="http://Cosmoslmj.com/Blog/categories/html/"/>
+      <category term="html" scheme="http://cosmoslmj.com/categories/html/"/>
     
     
-      <category term="html5" scheme="http://Cosmoslmj.com/Blog/tags/html5/"/>
+      <category term="html5" scheme="http://cosmoslmj.com/tags/html5/"/>
     
-      <category term="基础" scheme="http://Cosmoslmj.com/Blog/tags/%E5%9F%BA%E7%A1%80/"/>
+      <category term="基础" scheme="http://cosmoslmj.com/tags/%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
     <title>常见的html标签</title>
-    <link href="http://Cosmoslmj.com/Blog/2017/06/05/%E5%B8%B8%E8%A7%81%E7%9A%84html%E6%A0%87%E7%AD%BE/"/>
-    <id>http://Cosmoslmj.com/Blog/2017/06/05/常见的html标签/</id>
+    <link href="http://cosmoslmj.com/2017/06/05/%E5%B8%B8%E8%A7%81%E7%9A%84html%E6%A0%87%E7%AD%BE/"/>
+    <id>http://cosmoslmj.com/2017/06/05/常见的html标签/</id>
     <published>2017-06-05T03:48:48.000Z</published>
     <updated>2017-06-06T14:03:19.318Z</updated>
     
@@ -191,19 +191,19 @@ header/section/footer/aside/article/footer这几个标签最好不要嵌套在�
     
     </summary>
     
-      <category term="html" scheme="http://Cosmoslmj.com/Blog/categories/html/"/>
+      <category term="html" scheme="http://cosmoslmj.com/categories/html/"/>
     
     
-      <category term="基础" scheme="http://Cosmoslmj.com/Blog/tags/%E5%9F%BA%E7%A1%80/"/>
+      <category term="基础" scheme="http://cosmoslmj.com/tags/%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="html" scheme="http://Cosmoslmj.com/Blog/tags/html/"/>
+      <category term="html" scheme="http://cosmoslmj.com/tags/html/"/>
     
   </entry>
   
   <entry>
     <title>越努力，越幸运</title>
-    <link href="http://Cosmoslmj.com/Blog/2017/06/02/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://Cosmoslmj.com/Blog/2017/06/02/欢迎来到我的博客/</id>
+    <link href="http://cosmoslmj.com/2017/06/02/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://cosmoslmj.com/2017/06/02/欢迎来到我的博客/</id>
     <published>2017-06-02T10:14:39.000Z</published>
     <updated>2017-06-05T05:33:36.250Z</updated>
     
@@ -217,10 +217,10 @@ header/section/footer/aside/article/footer这几个标签最好不要嵌套在�
     
     </summary>
     
-      <category term="life" scheme="http://Cosmoslmj.com/Blog/categories/life/"/>
+      <category term="life" scheme="http://cosmoslmj.com/categories/life/"/>
     
     
-      <category term="life" scheme="http://Cosmoslmj.com/Blog/tags/life/"/>
+      <category term="life" scheme="http://cosmoslmj.com/tags/life/"/>
     
   </entry>
   

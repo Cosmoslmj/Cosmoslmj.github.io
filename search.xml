@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[常见的行内元素、块级元素与空元素]]></title>
-    <url>%2FBlog%2F2017%2F06%2F06%2F%E5%B8%B8%E8%A7%81%E7%9A%84%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E3%80%81%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E4%B8%8E%E7%A9%BA%E5%85%83%E7%B4%A0%2F</url>
+    <url>%2F2017%2F06%2F06%2F%E5%B8%B8%E8%A7%81%E7%9A%84%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E3%80%81%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E4%B8%8E%E7%A9%BA%E5%85%83%E7%B4%A0%2F</url>
     <content type="text"><![CDATA[常见的块级元素： div ul li ol dl dd dt h1~h6 p table blockquote 常见的行内元素: a b span img input select strong label em button textarea td 常见的空元素： br hr img input link meta 鲜为人知的空元素： area base col command embed source]]></content>
       <categories>
         <category>html</category>
@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <title><![CDATA[HTML5新增与删除的标签]]></title>
-    <url>%2FBlog%2F2017%2F06%2F05%2FHTML5%E6%96%B0%E5%A2%9E%E7%9A%84%E6%A0%87%E7%AD%BE%2F</url>
+    <url>%2F2017%2F06%2F05%2FHTML5%E6%96%B0%E5%A2%9E%E7%9A%84%E6%A0%87%E7%AD%BE%2F</url>
     <content type="text"><![CDATA[新增标签 结构标签（相当于div使用） header:定义页面的头部 nav:导航条 aside:定义页面内容的侧边栏 article: 定义文章段落 hgroup:定义文件中某块区域的相关信息 &lt;hgroup&gt; &lt;h2&gt;&lt;/h2&gt; &lt;/hgroup&gt; footer:定义页面的尾部 dialog:定义一个对话框 figure:可以用来包裹canvas,video等多媒体标签，定义一组媒体内容和它们的标题 figcaption:定义figure标签内定义媒体的标题 建议： 关于嵌套： header/section/footer/aside/article/footer这几个标签最好不要嵌套在里面 使用层级： 写在外层：header section footer 写在内层：aside /article /figure /hgroup /nav 媒体标签 video： 定义视频 属性：autoplay:是否自动播放 controls:是否展示控制器 css样式可以控制视频外框显示的宽高 里面可以有source标签 audio:定义一个音频 属性：autoplay:不写默认不自动，autoplay=&quot;autoplay&quot; loop:是否重复，也可以设置重复的次数 loop=&apos;-1&apos;无止尽重复 loop=&apos;5&apos; 重复5次 controls:是否显示控制器，默认不显示 里面可以有source标签 source:定义媒体资源 123 &lt;audio&gt; &lt;source src='音频资源' type='audio/转码格式'&gt;&lt;/audio&gt; 新的表单控件 calendar、 date、 time、 email、 url、 search 删除标签 1、可以使用css代替的标签 删除basefont,big,center,font,s,strike,tt,u这些纯表现的元素,html5中提倡把画面展示性功能放在css中统一编辑。。 2、html5不再使用frame 不再用frame,noframes和frameset，这些标签对可用性产生负面影响。HTML5中不支持frame框架，只支持iframe框架，或者用服务器方创建的由多个页面组成的符合页面的形式，删除以上这三个标签。 3、只有个别浏览器支持的标签 bgsound背景音乐，blink文字闪烁，marquee文字滚动,applet 4、其他不常用的标签 ul替代dir pre替代listing code替代xmp ruby替代rb abbr替代acronym 废除isindex使用form与input相结合的方式替代。 废除listing使用pre替代 废除nextid使用guids 废除plaintex使用“text/plian”（无格式正文）MIME类型替代。 三、重新定义的html标签 &lt;b&gt;：代表内联文本，通常是粗体，没有传递表示重要的意思。 &lt;i&gt;：代表内联文本，通常斜体，没有传递表示重要的意思。 &lt;dd&gt;:可以和details与figure一同使用，定义包含文本，djalog也可用 &lt;dt&gt;：可以和details与figure一同使用，汇总细节，dialog也可用 &lt;menu&gt;：重新定义用户界面的菜单，配合commond或者menuitem使用 &lt;small&gt;：表示小字体，例如打印注释或者法律条款 &lt;strong&gt;：表示重要性而不是强调符号 新标签进行布局意义：1.提升语义化特性和网页的质量2.减少了用于css调用的class和id属性3.对搜索引擎更友好 资源链接http://www.ibm.com/developerworks/cn/web/1212_zhouxiang_deepintohtml5/]]></content>
       <categories>
         <category>html</category>
@@ -26,7 +26,7 @@
   </entry>
   <entry>
     <title><![CDATA[常见的html标签]]></title>
-    <url>%2FBlog%2F2017%2F06%2F05%2F%E5%B8%B8%E8%A7%81%E7%9A%84html%E6%A0%87%E7%AD%BE%2F</url>
+    <url>%2F2017%2F06%2F05%2F%E5%B8%B8%E8%A7%81%E7%9A%84html%E6%A0%87%E7%AD%BE%2F</url>
     <content type="text"><![CDATA[12345678910111213141516171819202122232425262728## 常见的标签&lt;html&gt;文本描述网页定义整个html文档 &lt;/html&gt;&lt;body&gt; 定义html文档的主体部分 &lt;/body&gt;&lt;head&gt; &lt;/head&gt;&lt;title&gt; 项目的标题，会显示在浏览器上方 &lt;/title&gt;&lt;link rel="stylesheet" type="text/css" href="theme.css" /&gt; 链接CSS样式&lt;link rel="shortcut icon" href="favicon.ico"/&gt; 链接项目图标&lt;meta name="description" content="描述内容"/&gt;&lt;meta name="keywords" content="关键字"/&gt;&lt;meta name="author" content="作者"/&gt;&lt;meta http-equiv="refresh" content="0";url=""&gt; 经过自定义的时间跳转到url设置的相应地址页面&lt;script src=""&gt;链接脚本文件&lt;/script&gt;&lt;div&gt; 定义区域块 &lt;/div&gt;&lt;span&gt; 定义行内小区域块 &lt;/span&gt;&lt;a href="www.google.com.hk"&gt; 666 &lt;/a&gt; 跳转到指定链接地址&lt;img src="image/open.jpg"/&gt;&lt;button type="button"&gt;点我，我是按钮&lt;button&gt;&lt;ul&gt;&lt;li&gt;我是无序列表&lt;/li&gt;&lt;/ul&gt;&lt;ol&gt;&lt;li&gt;我是有序列表&lt;/li&gt;&lt;/ol&gt;&lt;h1&gt;标题1，我显示出来默认最大&lt;/h1&gt;&lt;h2&gt;标题2&lt;/h2&gt;~~&lt;h6&gt;标题6&lt;/h6&gt;&lt;form&gt;用于创建HTML表单，里面可以是 input 元素，比如文本字段、复选框、单选框、提交按钮，还可以包含 menus、textarea、fieldset、legend 和 label 元素&lt;/form&gt;&lt;input type="submit" value="提交"/&gt;&lt;input type="text" value="文本"/&gt;。。。 注意！！！&lt;!DOCTYPE&gt; 不是 HTML 标签。它为浏览器提供一项信息（声明），即 HTML 是用什么版本编写的 一般书写格式： 12345678910111213141516171819202122&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt; &lt;meta charset="UTF-8"&gt; &lt;title&gt;拉勾网-最专业的互联网招聘平台_找工作_招聘_人才网_求职&lt;/title&gt; &lt;link rel="stylesheet" href="css/base.css"&gt; &lt;link rel="stylesheet" href="css/mycss.css"&gt; &lt;link rel="shortcut icon" href="images/favicon.ico"&gt; &lt;meta name="keywords" content="互联网招聘,找工作,招聘网,人才网" &gt; &lt;meta name="description" content="拉勾网是最权威的互联网行业招聘网站,提供全国真实的互联网招聘信息,工资不面议当面谈,找工作,招聘网,寻人才就来拉勾网,互联网行业找工作首选拉勾网" &gt; &lt;style&gt;如果上面不调用外部样式的话，这里可以书写样式，一般建议用外部样式&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="lg_header"&gt; &lt;div class="lg_tbar"&gt; &lt;/div&gt; ...&lt;/div&gt;&lt;script&gt;这里写脚本代码，也可以在上面&lt;head&gt;里面链接外部文件&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;]]></content>
       <categories>
         <category>html</category>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <title><![CDATA[越努力，越幸运]]></title>
-    <url>%2FBlog%2F2017%2F06%2F02%2F%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%2F</url>
+    <url>%2F2017%2F06%2F02%2F%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%2F</url>
     <content type="text"><![CDATA[记载点滴~从心开始]]></content>
       <categories>
         <category>life</category>
