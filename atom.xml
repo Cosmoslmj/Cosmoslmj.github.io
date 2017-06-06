@@ -147,9 +147,9 @@ header/section/footer/aside/article/footer这几个标签最好不要嵌套在�
       <category term="html" scheme="http://Cosmoslmj.com/Blog/categories/html/"/>
     
     
-      <category term="html5" scheme="http://Cosmoslmj.com/Blog/tags/html5/"/>
-    
       <category term="基础" scheme="http://Cosmoslmj.com/Blog/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="html5" scheme="http://Cosmoslmj.com/Blog/tags/html5/"/>
     
   </entry>
   
@@ -176,9 +176,9 @@ header/section/footer/aside/article/footer这几个标签最好不要嵌套在�
       <category term="html" scheme="http://Cosmoslmj.com/Blog/categories/html/"/>
     
     
-      <category term="基础" scheme="http://Cosmoslmj.com/Blog/tags/%E5%9F%BA%E7%A1%80/"/>
-    
       <category term="html" scheme="http://Cosmoslmj.com/Blog/tags/html/"/>
+    
+      <category term="基础" scheme="http://Cosmoslmj.com/Blog/tags/%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
