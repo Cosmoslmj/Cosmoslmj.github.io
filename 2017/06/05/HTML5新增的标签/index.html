@@ -7,8 +7,7 @@
 
 <html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
-  
-<meta charset="UTF-8"/>
+  <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -64,74 +63,6 @@
 
 
 
-<!--page counter part-->
-<script>
-function addCount (Counter) {
-        url=$('.article-date').attr('href').trim();
-    title = $('.article-title').text().trim();
-    var query=new AV.Query(Counter);
-    //use url as unique idnetfication
-    query.equalTo("url",url);
-    query.find({
-        success: function(results){
-            if(results.length>0)
-            {
-                var counter=results[0];
-                counter.fetchWhenSave(true); //get recent result
-                counter.increment("time");
-                counter.save();
-            }
-            else
-            {
-                var newcounter=new Counter();
-                newcounter.set("title",title);
-                newcounter.set("url",url);
-                newcounter.set("time",1);
-                newcounter.save(null,{
-                    success: function(newcounter){
-                    //alert('New object created');
-                    },
-                    error: function(newcounter,error){
-                    alert('Failed to create');
-                    }
-                    });
-            }
-        },
-        error: function(error){
-            //find null is not a error
-            alert('Error:'+error.code+" "+error.message);
-        }
-    });
-}
-$(function(){
-    var Counter=AV.Object.extend("Counter");
-    //only increse visit counting when intering a page
-    if ($('.article-title').length == 1)
-       addCount(Counter);
-    var query=new AV.Query(Counter);
-    query.descending("time");
-    // the sum of popular posts
-    query.limit(10); 
-    query.find({
-        success: function(results){
-                for(var i=0;i<results.length;i++)    
-                {
-                    var counter=results[i];
-                    title=counter.get("title");
-                    url=counter.get("url");
-                    time=counter.get("time");
-                    // add to the popularlist widget
-                    showcontent=title+" ("+time+")";
-                    //notice the "" in href
-                    $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
-                }
-            },
-        error: function(error){
-            alert("Error:"+error.code+" "+error.message);
-        }
-        }
-    )
-    });
 
 
 
@@ -140,7 +71,7 @@ $(function(){
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="基础,html5," />
+  <meta name="keywords" content="html5,基础," />
 
 
 
@@ -159,7 +90,7 @@ $(function(){
 
 
 <meta name="description" content="新增标签           结构标签（相当于div使用） header:定义页面的头部 nav:导航条 aside:定义页面内容的侧边栏 article: 定义文章段落 hgroup:定义文件中某块区域的相关信息  &amp;lt;hgroup&amp;gt; &amp;lt;h2&amp;gt;&amp;lt;/h2&amp;gt;    &amp;lt;/hgroup&amp;gt;         footer:定义页面的尾部 dialog:定义一个">
-<meta name="keywords" content="基础,html5">
+<meta name="keywords" content="html5,基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTML5新增与删除的标签">
 <meta property="og:url" content="http://cosmoslmj.com/2017/06/05/HTML5新增的标签/index.html">
@@ -588,9 +519,9 @@ audio:定义一个音频
       
         <div class="post-tags">
           
-            <a href="/tags/基础/" rel="tag"># 基础</a>
-          
             <a href="/tags/html5/" rel="tag"># html5</a>
+          
+            <a href="/tags/基础/" rel="tag"># 基础</a>
           
         </div>
       
@@ -774,8 +705,6 @@ audio:定义一个音频
     NexT.Mist
   </a>
 </div>
-
-
 
 
         
