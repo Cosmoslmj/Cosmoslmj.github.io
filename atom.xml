@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://cosmoslmj.com/"/>
-  <updated>2017-06-07T07:56:58.337Z</updated>
+  <updated>2017-06-07T08:00:09.368Z</updated>
   <id>http://cosmoslmj.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://cosmoslmj.com/2017/06/07/%E5%85%B3%E4%BA%8EHtml5%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E3%80%8A%E4%BA%8C%E3%80%8B/"/>
     <id>http://cosmoslmj.com/2017/06/07/关于Html5的那些事《二》/</id>
     <published>2017-06-07T07:14:17.000Z</published>
-    <updated>2017-06-07T07:56:58.337Z</updated>
+    <updated>2017-06-07T08:00:09.368Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Html5-新的Input类型-type"><a href="#Html5-新的Input类型-type" class="headerlink" title="Html5 新的Input类型  type"></a>Html5 新的Input类型  type</h3><ul>
 <li><strong>email</strong>  应包含e - mail 地址的输入域，提交表单时候会自动验证email域的值</li>
@@ -52,16 +52,16 @@
 </ul>
 <ul>
 <li>HTML5之前的版本是：HTML4.01</li>
-<li>HTML5中不再支持<script>元素中的type属性     </li>
+<li>HTML5中不再支持script元素中的type属性     </li>
 <li>在HTML5中，contextmenu和spellcheck是 html 属性</li>
 <li>getContext 是HTML5内建对象用于在画布上绘制</li>
 <li>range输入类型定义滑块控件</li>
 <li>meter是HTML5元素显示已知范围内的标量测量</li>
 </ul>
 <ul>
-<li>资源链接：<br>(<a href="http://www.w3school.com.cn/quiz/quiz.asp?quiz=html5">http://www.w3school.com.cn/quiz/quiz.asp?quiz=html5</a>)</li>
+<li>资源链接：<br>(<a href="http://www.w3school.com.cn/quiz/quiz.asp?quiz=html5" target="_blank" rel="external">http://www.w3school.com.cn/quiz/quiz.asp?quiz=html5</a>)</li>
 </ul>
-</script></li></ul>]]></content>
+]]></content>
     
     <summary type="html">
     
