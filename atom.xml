@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://cosmoslmj.com/"/>
-  <updated>2017-06-07T05:20:45.042Z</updated>
+  <updated>2017-06-07T05:28:03.356Z</updated>
   <id>http://cosmoslmj.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://cosmoslmj.com/2017/06/07/%E5%85%B3%E4%BA%8EHtml5%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
     <id>http://cosmoslmj.com/2017/06/07/关于Html5的那些事/</id>
     <published>2017-06-07T00:24:04.000Z</published>
-    <updated>2017-06-07T05:20:45.042Z</updated>
+    <updated>2017-06-07T05:28:03.356Z</updated>
     
     <content type="html"><![CDATA[<h3 id="video"><a href="#video" class="headerlink" title="video"></a>video</h3><ul>
 <li>video元素可以放多个source元素，浏览器会识别第一个有效的视频文件地址</li>
@@ -42,32 +42,19 @@
 </ul>
 <p>创建Canvas的步骤：</p>
 <ul>
-<li><p>添加canvas元素</p>
-<canvas id="myCanvas" width="200" height="100"></canvas>
-
-
-</li>
+<li>添加canvas元素</li>
 </ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">canvas</span> id=<span class="string">"myCanvas"</span> <span class="attribute">width</span>=<span class="string">"200"</span> height=<span class="string">"100"</span>&gt;&lt;/canvas&gt;</div></pre></td></tr></table></figure>
 <ul>
 <li><p>通过JS绘制，因为canvas元素本身没有绘制能力<br>绘制形状内容：</p>
-<script>
-//获取ID
-var c = document.getElementById("myCanvas");
-//创建context对象
-var cxt = c.getContext("2d"');
-//绘制红色
-cxt.fillStyle = "#FF0000";
-//绘制 150*75 的矩形 从左上角 (0,0)开始
-cxt.fillRect(0,0,150,75);
-</script>
-
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">//获取ID</div><div class="line">var c = document.getElementById("myCanvas");</div><div class="line">//创建context对象</div><div class="line">var cxt = c.getContext("2d"');</div><div class="line">//绘制红色</div><div class="line">cxt.fillStyle = "#FF0000";</div><div class="line">//绘制 150*75 的矩形 从左上角 (0,0)开始</div><div class="line">cxt.fillRect(0,0,150,75);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
 <p>绘制线条：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> c=<span class="built_in">document</span>.getElementById(<span class="string">"myCanvas"</span>);</div><div class="line"><span class="keyword">var</span> cxt=c.getContext(<span class="string">"2d"</span>);</div><div class="line">cxt.moveTo(<span class="number">0</span>,<span class="number">0</span>);</div><div class="line">cxt.lineTo(<span class="number">100</span>,<span class="number">50</span>);</div><div class="line">cxt.lineTo(<span class="number">1</span>,<span class="number">50</span>);</div><div class="line">cxt.stroke();</div></pre></td></tr></table></figure>
+<p>![上面代码解析][/source/img/1.png]</p>
 </li>
 </ul>
-<p>var c=document.getElementById(“myCanvas”);<br>var cxt=c.getContext(“2d”);<br>cxt.moveTo(0,0);<br>cxt.lineTo(100,50);<br>cxt.lineTo(1,50);<br>cxt.stroke();</p>
-<p> ![上面代码解析][/source/img/1.png]</p>
 <p> 绘制一个圆</p>
-<p>var c=document.getElementById(“myCanvas”);<br>var cxt=c.getContext(“2d”);<br>cxt.fillStyle=”#FF0000”;<br>cxt.beginPath(); //开始路径<br>cxt.arc(70,18,15,0,Math.PI*2,true);<br>cxt.closePath(); //结束路径<br>cxt.fill();</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> c=<span class="built_in">document</span>.getElementById(<span class="string">"myCanvas"</span>);</div><div class="line"><span class="keyword">var</span> cxt=c.getContext(<span class="string">"2d"</span>);</div><div class="line">cxt.fillStyle=<span class="string">"#FF0000"</span>;</div><div class="line">cxt.beginPath(); <span class="comment">//开始路径</span></div><div class="line">cxt.arc(<span class="number">70</span>,<span class="number">18</span>,<span class="number">15</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">true</span>);</div><div class="line">cxt.closePath(); <span class="comment">//结束路径</span></div><div class="line">cxt.fill();</div></pre></td></tr></table></figure>
 <p><strong> arc(定义一个中心点，半径，起始角度，结束角度，绘图方向布尔值)  </strong><br>上面代码解析：<br>定义了一个圆心坐标是：（70,18）半径是：15 起始位置是：0 PI  沿顺时针（0 PI  0.5 PI 1 PI 1.5 PI）Math.PI * 2 就是整个圆   true:顺方向 false:逆方向</p>
 <h3 id="SVG"><a href="#SVG" class="headerlink" title="SVG"></a>SVG</h3><p>SVG和Canvas都允许在浏览器创建图像，但两者在根本上不同</p>
 <p>SVG：<br>        是一种使用 <strong>XML描述</strong>2D图形的语言，基于XML，意味着SVG DOM中的每个元素都可以用，可以给某个元素添加Js时间处理器，每个绘制的图形都被看做是对象，如果SVG的属性发生编发，浏览器会自动重现图形。</p>
