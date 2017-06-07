@@ -96,7 +96,7 @@
 <meta property="og:url" content="http://cosmoslmj.com/2017/06/07/关于Html5的那些事/index.html">
 <meta property="og:site_name" content="小君前端学习">
 <meta property="og:description" content="video video元素可以放多个source元素，浏览器会识别第一个有效的视频文件地址 video可以通过Dom操作进行设置相应的播放、暂停、t停止、宽度调节等。主要通过play()  /  pause()  load()  paused / width 12345678910111213141516171819202122232425262728293031 function playPau">
-<meta property="og:updated_time" content="2017-06-07T02:40:40.466Z">
+<meta property="og:updated_time" content="2017-06-07T02:56:27.782Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Html5的那些事《一》">
 <meta name="twitter:description" content="video video元素可以放多个source元素，浏览器会识别第一个有效的视频文件地址 video可以通过Dom操作进行设置相应的播放、暂停、t停止、宽度调节等。主要通过play()  /  pause()  load()  paused / width 12345678910111213141516171819202122232425262728293031 function playPau">
@@ -423,7 +423,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">绘制线条：</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>var c=document.getElementById(“myCanvas”);<br>var cxt=c.getContext(“2d”);<br>cxt.moveTo(0,0);<br>cxt.lineTo(100,50);<br>cxt.lineTo(1,50);<br>cxt.stroke();<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">![enter description here][1]</div><div class="line">  </div><div class="line">  绘制一个圆</div></pre></td></tr></table></figure></p>
+<p>var c=document.getElementById(“myCanvas”);<br>var cxt=c.getContext(“2d”);<br>cxt.moveTo(0,0);<br>cxt.lineTo(100,50);<br>cxt.lineTo(1,50);<br>cxt.stroke();<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">![上面代码解析][1]</div><div class="line"></div><div class="line"></div><div class="line">绘制一个圆</div></pre></td></tr></table></figure></p>
 <p>var c=document.getElementById(“myCanvas”);<br>var cxt=c.getContext(“2d”);<br>cxt.fillStyle=”#FF0000”;<br>cxt.beginPath(); //开始路径<br>cxt.arc(70,18,15,0,Math.PI<em>2,true);<br>cxt.closePath(); //结束路径<br>cxt.fill();<br>  ```<br><strong> arc(定义一个中心点，半径，起始角度，结束角度，绘图方向布尔值)  </strong><br>上面代码解析：<br>定义了一个圆心坐标是：（70,18）半径是：15 起始位置是：0 PI  沿顺时针（0 PI  0.5 PI 1 PI 1.5 PI）Math.PI </em> 2 就是整个圆   true:顺方向 false:逆方向</p>
 <ul>
 <li>SVG<br>SVG和Canvas都允许在浏览器创建图像，但两者在根本上不同</li>
