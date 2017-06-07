@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://cosmoslmj.com/"/>
-  <updated>2017-06-06T14:03:49.990Z</updated>
+  <updated>2017-06-07T01:59:27.555Z</updated>
   <id>http://cosmoslmj.com/</id>
   
   <author>
@@ -14,6 +14,69 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于Html5的那些事《一》</title>
+    <link href="http://cosmoslmj.com/2017/06/07/%E5%85%B3%E4%BA%8EHtml5%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
+    <id>http://cosmoslmj.com/2017/06/07/关于Html5的那些事/</id>
+    <published>2017-06-07T00:24:04.000Z</published>
+    <updated>2017-06-07T01:59:27.555Z</updated>
+    
+    <content type="html"><![CDATA[<p>###video</p>
+<ul>
+<li>video元素可以放多个source元素，浏览器会识别第一个有效的视频文件地址</li>
+<li><p>video可以通过Dom操作进行设置相应的播放、暂停、t停止、宽度调节等。主要通过play()  /  pause()  load()  paused / width</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"> function playPause()</div><div class="line">&#123; </div><div class="line">if (myVideo.paused) </div><div class="line">  myVideo.play(); </div><div class="line">else </div><div class="line">  myVideo.pause(); </div><div class="line">&#125; </div><div class="line"></div><div class="line">function makeBig()</div><div class="line">&#123; </div><div class="line">myVideo.width=560; </div><div class="line">&#125; </div><div class="line">```    </div><div class="line"></div><div class="line"> - 所有属性中只有videoWidth videoHeight属性是立即可用的。其他属性都要等视频的元数据已加载完成后才可以用。</div><div class="line"> - video 支持3种视频格式 ：Ogg MPEG 4 WebM</div><div class="line"> </div><div class="line"> ###audio</div><div class="line"> </div><div class="line"> - audio元素支持3种音频格式：Ogg Vorbis   MP3 Wav</div><div class="line"> ###Html5拖放</div><div class="line"> </div><div class="line"> - 拖放（Drag drop）是html5标准的组成部分，任何元素都可以拖放  9以上IE，并且设置元素属性draggable=&quot;true&quot;</div><div class="line"> ###Canvas</div><div class="line"> </div><div class="line"> - 使用javascript 在网页上绘制图像，矩形区域 ，可以控制它的每一个像素，拥有多种绘制路径、矩形、圆形、字符和添加图像的方法</div><div class="line"></div><div class="line">创建Canvas的步骤：</div><div class="line">	</div><div class="line"></div><div class="line"> - 添加canvas元素</div></pre></td></tr></table></figure>
+<p><canvas id="myCanvas" width="200" height="100"></canvas></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">- 通过JS绘制，因为canvas元素本身没有绘制能力</div><div class="line">绘制形状内容：</div></pre></td></tr></table></figure>
+<p><script><br>//获取ID<br>var c = document.getElementById(“myCanvas”);<br>//创建context对象<br>var cxt = c.getContext(“2d”‘);<br>//绘制红色<br>cxt.fillStyle = “#FF0000”;<br>//绘制 150*75 的矩形 从左上角 (0,0)开始<br>cxt.fillRect(0,0,150,75);<br></script></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">绘制线条：</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>var c=document.getElementById(“myCanvas”);<br>var cxt=c.getContext(“2d”);<br>cxt.moveTo(0,0);<br>cxt.lineTo(100,50);<br>cxt.lineTo(1,50);<br>cxt.stroke();<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">![上面代码的解析][1]</div><div class="line"> </div><div class="line"></div><div class="line"></div><div class="line">  [1]: ./images/QQ%E5%9B%BE%E7%89%8720170607091345.png &quot;QQ图片20170607091345.png&quot;</div><div class="line">  </div><div class="line">  绘制一个圆</div></pre></td></tr></table></figure></p>
+<p>var c=document.getElementById(“myCanvas”);<br>var cxt=c.getContext(“2d”);<br>cxt.fillStyle=”#FF0000”;<br>cxt.beginPath(); //开始路径<br>cxt.arc(70,18,15,0,Math.PI<em>2,true);<br>cxt.closePath(); //结束路径<br>cxt.fill();<br>  ```<br><strong> arc(定义一个中心点，半径，起始角度，结束角度，绘图方向布尔值)  </strong><br>上面代码解析：<br>定义了一个圆心坐标是：（70,18）半径是：15 起始位置是：0 PI  沿顺时针（0 PI  0.5 PI 1 PI 1.5 PI）Math.PI </em> 2 就是整个圆   true:顺方向 false:逆方向</p>
+<ul>
+<li>SVG<br>SVG和Canvas都允许在浏览器创建图像，但两者在根本上不同</li>
+</ul>
+<p>SVG：<br>        是一种使用 <strong>XML描述</strong>2D图形的语言，基于XML，意味着SVG DOM中的每个元素都可以用，可以给某个元素添加Js时间处理器，每个绘制的图形都被看做是对象，如果SVG的属性发生编发，浏览器会自动重现图形。</p>
+<hr>
+<p>Canvas:<br>        是通过<strong>js来描绘</strong>2D图形，逐像素渲染，一旦绘制，浏览器就不关注了，如果它的位置有变化，整个场景都要重新绘制，包括任何或许已被图形覆盖的对象。</p>
+<hr>
+<p>Canvas与SVG的比较：<br>        Canvas:</p>
+<ul>
+<li>依赖分辨率</li>
+<li>不支持时间处理器</li>
+<li>弱文本传染能力</li>
+<li>能以.png .jpg格式保存结果图像</li>
+<li>最适合图像密集型的游戏，其中的许多对象会被频繁重绘</li>
+</ul>
+<p>SVG：</p>
+<ul>
+<li>不依赖分辨率</li>
+<li>支持时间处理器</li>
+<li>最合适带有大型渲染区域的应用程序（谷歌地图）</li>
+<li>复杂度高会减慢渲染速度（任何过度使用DOM的应用都会减慢）</li>
+<li>不适合游戏应用</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###video&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;video元素可以放多个source元素，浏览器会识别第一个有效的视频文件地址&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;video可以通过Dom操作进行设置相应的播放、暂停、t停止、宽度调节等。主要通过play()  /  pause()  lo
+    
+    </summary>
+    
+      <category term="html5" scheme="http://cosmoslmj.com/categories/html5/"/>
+    
+    
+      <category term="html5" scheme="http://cosmoslmj.com/tags/html5/"/>
+    
+      <category term="w3c" scheme="http://cosmoslmj.com/tags/w3c/"/>
+    
+  </entry>
   
   <entry>
     <title>常见的行内元素、块级元素与空元素</title>
