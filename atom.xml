@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://cosmoslmj.com/"/>
-  <updated>2017-06-09T09:50:39.598Z</updated>
+  <updated>2017-06-09T09:52:53.139Z</updated>
   <id>http://cosmoslmj.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://cosmoslmj.com/2017/06/09/%E8%AF%B4%E8%AF%B4%E5%AD%A6%E4%B9%A0javascript%E5%81%9A%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%B0%8F%E4%BE%8B%E5%AD%90/"/>
     <id>http://cosmoslmj.com/2017/06/09/说说学习javascript做过的那些小例子/</id>
     <published>2017-06-09T08:41:21.000Z</published>
-    <updated>2017-06-09T09:50:39.598Z</updated>
+    <updated>2017-06-09T09:52:53.139Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-给定一个随机数字组成的数组，选取其中的偶数，并排序，-返回新数组；"><a href="#1-给定一个随机数字组成的数组，选取其中的偶数，并排序，-返回新数组；" class="headerlink" title="1.给定一个随机数字组成的数组，选取其中的偶数，并排序， 返回新数组；"></a>1.给定一个随机数字组成的数组，选取其中的偶数，并排序， 返回新数组；</h2><h3 id="定义一个随机数组"><a href="#定义一个随机数组" class="headerlink" title="定义一个随机数组"></a>定义一个随机数组</h3><pre><code>var arr = [];
 for(var i = 0; i &lt; 50; i++) {
@@ -116,7 +116,7 @@ oddMax();
 <li>数组内数与数的比较</li>
 </ol>
 <hr>
-<h2 id="给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串"><a href="#给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串" class="headerlink" title="给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串"></a>给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串</h2><h3 id="如‘abcdfasdfjkflkwerkjdskfjskdjflklasdfldf’-，统计-字符d-的个数，并将其中的-d-用s全部替换"><a href="#如‘abcdfasdfjkflkwerkjdskfjskdjflklasdfldf’-，统计-字符d-的个数，并将其中的-d-用s全部替换" class="headerlink" title="如‘abcdfasdfjkflkwerkjdskfjskdjflklasdfldf’; ，统计 字符d 的个数，并将其中的 d 用s全部替换"></a><strong>如</strong>‘abcdfasdfjkflkwerkjdskfjskdjflklasdfldf’; ，统计 字符d 的个数，并将其中的 d 用s全部替换</h3><pre><code> function matchStr(str) {
+<h2 id="3-给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串"><a href="#3-给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串" class="headerlink" title="3.给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串"></a>3.给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串</h2><h3 id="如‘abcdfasdfjkflkwerkjdskfjskdjflklasdfldf’-，统计-字符d-的个数，并将其中的-d-用s全部替换"><a href="#如‘abcdfasdfjkflkwerkjdskfjskdjflklasdfldf’-，统计-字符d-的个数，并将其中的-d-用s全部替换" class="headerlink" title="如‘abcdfasdfjkflkwerkjdskfjskdjflklasdfldf’; ，统计 字符d 的个数，并将其中的 d 用s全部替换"></a><strong>如</strong>‘abcdfasdfjkflkwerkjdskfjskdjflklasdfldf’; ，统计 字符d 的个数，并将其中的 d 用s全部替换</h3><pre><code> function matchStr(str) {
     var reg =/d/g;
     var len= str.match(reg).length;
     console.log(&apos;d出现的个数是&apos; + len);
@@ -315,9 +315,9 @@ matchStr(a);
       <category term="html" scheme="http://cosmoslmj.com/categories/html/"/>
     
     
-      <category term="html" scheme="http://cosmoslmj.com/tags/html/"/>
-    
       <category term="基础" scheme="http://cosmoslmj.com/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="html" scheme="http://cosmoslmj.com/tags/html/"/>
     
   </entry>
   
@@ -439,9 +439,9 @@ header/section/footer/aside/article/footer这几个标签最好不要嵌套在�
       <category term="html" scheme="http://cosmoslmj.com/categories/html/"/>
     
     
-      <category term="基础" scheme="http://cosmoslmj.com/tags/%E5%9F%BA%E7%A1%80/"/>
-    
       <category term="html5" scheme="http://cosmoslmj.com/tags/html5/"/>
+    
+      <category term="基础" scheme="http://cosmoslmj.com/tags/%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -468,9 +468,9 @@ header/section/footer/aside/article/footer这几个标签最好不要嵌套在�
       <category term="html" scheme="http://cosmoslmj.com/categories/html/"/>
     
     
-      <category term="html" scheme="http://cosmoslmj.com/tags/html/"/>
-    
       <category term="基础" scheme="http://cosmoslmj.com/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="html" scheme="http://cosmoslmj.com/tags/html/"/>
     
   </entry>
   
