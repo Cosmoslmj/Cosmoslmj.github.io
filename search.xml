@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[说说学习javascript做过的那些小例子]]></title>
     <url>%2F2017%2F06%2F09%2F%E8%AF%B4%E8%AF%B4%E5%AD%A6%E4%B9%A0javascript%E5%81%9A%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%B0%8F%E4%BE%8B%E5%AD%90%2F</url>
-    <content type="text"><![CDATA[1.给定一个随机数字组成的数组，选取其中的偶数，并排序， 返回新数组；定义一个随机数组var arr = []; for(var i = 0; i &lt; 50; i++) { arr[i] = parseInt(Math.random()*50); } var cl = arr.join(&apos;,&apos;); document.write(&apos;给定一个随机数字组成的数组&apos;+&quot;[&quot;+cl+&quot;]&quot;+&quot;&lt;br&gt;&quot;); 判断数组中偶数var arr2 = []; for(var i = 0; i &lt; arr.length; i++) { if(arr[i] % 2 === 0) { arr2.push(arr[i]); } } 给这些偶数升序排序arr2.sort(function sortNumber(a,b) { return a-b; }) document.write(&quot;选出上面数组的偶数并将其升序排序后这个新数组是&quot;+&quot;[&quot;+arr2+&quot;]&quot;+&quot;&lt;br&gt;&quot;); 给这些偶数升序排序后去重function find() { var arr3 = []; for(var i = 0; i &lt; arr2.length; i++) { if(arr3.indexOf(arr2[i]) &lt; 0) { arr3.push(arr2[i]); } } document.write(&quot;给上面的数组去重后新数组是&quot;+&quot;[&quot;+arr3+&quot;]&quot;+&quot;&lt;br&gt;&quot;); } find(arr2); 给这些偶数降序排序var arr4 = []; for(var i = 0; i &lt; arr.length; i++) { if(arr[i] % 2 === 0) { arr4.push(arr[i]); } } arr4.sort(function sortNumber(a,b) { return b-a; }); document.write(&quot;选出上面数组的偶数并将其降序排序后这个新数组是&quot;+&quot;[&quot;+arr4+&quot;]&quot;+&quot;&lt;br&gt;&quot;); 总结1： 随机数：parseInt(Math).random() —&gt;范围是0-1的整数， parseInt(Math).random()*50—&gt;范围是0-50的整数 arr.join(‘,’) 把数组内的数用‘,’连接 arr2.push(arr[i]) 遍历arr把arr的内容放到arr2中 数组升序与降序方法： arr.sort(function sortNumber(a,b)) { return a - b ;}) a-b是升序 b-a是降序 去重 arr3.indexOf(arr2[i] &lt; 0) 2.给定一个随机数字组成的数组，选取其中最大的奇数，并返回这个奇数；随机定义一个数组var odd = []; for(var i = 0; i &lt; 20; i++) { odd[i] = parseInt(Math.random()*100); } var a = odd.join(&apos;,&apos;); document.write(&apos;给定一个随机数字组成的数组&apos;+&quot;[&quot;+a+&quot;]&quot;+&quot;&lt;br&gt;&quot;); 选取数组中的奇数var odd2 = []; for(i = 0; i &lt; odd.length; i++) { if(odd[i] % 2 != 0) { odd2.push(odd[i]); } } document.write(&apos;数组中的所有奇数&apos;+&quot;[&quot;+odd2+&quot;]&quot;+&quot;&lt;br&gt;&quot;); 选取数组中最大的奇数var max = 0; for(i = 0;i &lt; odd2.length; i++) { if(odd2[i] &gt; max) { max = odd2[i]; } } document.write(&apos;上面数组所有奇数中最大的奇数为&apos;+max+&quot;&lt;br&gt;&quot;); 整合代码如下： function oddMax() { var odd = []; for(var i = 0; i &lt; 20; i++) { odd[i] = parseInt(Math.random()*100); document.write(&apos;给定一个随机数字组成的数组&apos;+&quot;[&quot;+odd[i]+&quot;]&quot;+&quot;&lt;br&gt;&quot;); } var odd2 = []; for(i = 0; i &lt; odd.length; i++) { if(odd[i] % 2 != 0) { odd2.push(odd[i]); } } var max = 0; for(i = 0;i &lt; odd2.length; i++) { if(odd2[i] &gt; max) { max = odd2[i]; } } return max; } oddMax(); 总结2： 随机数 选取数组中的奇数 数组内数与数的比较 给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串如‘abcdfasdfjkflkwerkjdskfjskdjflklasdfldf’; ，统计 字符d 的个数，并将其中的 d 用s全部替换 function matchStr(str) { var reg =/d/g; var len= str.match(reg).length; console.log(&apos;d出现的个数是&apos; + len); return str.replace(/d/g,&quot;s&quot;); } a = &apos;abcdfasdfjkflkwerkjdskfjskdjflklasdfldf&apos;; matchStr(a); 总结2： 正则表达式匹配]]></content>
+    <content type="text"><![CDATA[1.给定一个随机数字组成的数组，选取其中的偶数，并排序， 返回新数组；定义一个随机数组var arr = []; for(var i = 0; i &lt; 50; i++) { arr[i] = parseInt(Math.random()*50); } var cl = arr.join(&apos;,&apos;); document.write(&apos;给定一个随机数字组成的数组&apos;+&quot;[&quot;+cl+&quot;]&quot;+&quot;&lt;br&gt;&quot;); 判断数组中偶数var arr2 = []; for(var i = 0; i &lt; arr.length; i++) { if(arr[i] % 2 === 0) { arr2.push(arr[i]); } } 给这些偶数升序排序arr2.sort(function sortNumber(a,b) { return a-b; }) document.write(&quot;选出上面数组的偶数并将其升序排序后这个新数组是&quot;+&quot;[&quot;+arr2+&quot;]&quot;+&quot;&lt;br&gt;&quot;); 给这些偶数升序排序后去重function find() { var arr3 = []; for(var i = 0; i &lt; arr2.length; i++) { if(arr3.indexOf(arr2[i]) &lt; 0) { arr3.push(arr2[i]); } } document.write(&quot;给上面的数组去重后新数组是&quot;+&quot;[&quot;+arr3+&quot;]&quot;+&quot;&lt;br&gt;&quot;); } find(arr2); 给这些偶数降序排序var arr4 = []; for(var i = 0; i &lt; arr.length; i++) { if(arr[i] % 2 === 0) { arr4.push(arr[i]); } } arr4.sort(function sortNumber(a,b) { return b-a; }); document.write(&quot;选出上面数组的偶数并将其降序排序后这个新数组是&quot;+&quot;[&quot;+arr4+&quot;]&quot;+&quot;&lt;br&gt;&quot;); 总结1： 随机数：parseInt(Math).random() —&gt;范围是0-1的整数， parseInt(Math).random()*50—&gt;范围是0-50的整数 arr.join(‘,’) 把数组内的数用‘,’连接 arr2.push(arr[i]) 遍历arr把arr的内容放到arr2中 数组升序与降序方法： arr.sort(function sortNumber(a,b)) { return a - b ;}) a-b是升序 b-a是降序 去重 arr3.indexOf(arr2[i] &lt; 0) 2.给定一个随机数字组成的数组，选取其中最大的奇数，并返回这个奇数；随机定义一个数组var odd = []; for(var i = 0; i &lt; 20; i++) { odd[i] = parseInt(Math.random()*100); } var a = odd.join(&apos;,&apos;); document.write(&apos;给定一个随机数字组成的数组&apos;+&quot;[&quot;+a+&quot;]&quot;+&quot;&lt;br&gt;&quot;); 选取数组中的奇数var odd2 = []; for(i = 0; i &lt; odd.length; i++) { if(odd[i] % 2 != 0) { odd2.push(odd[i]); } } document.write(&apos;数组中的所有奇数&apos;+&quot;[&quot;+odd2+&quot;]&quot;+&quot;&lt;br&gt;&quot;); 3.选取数组中最大的奇数var max = 0; for(i = 0;i &lt; odd2.length; i++) { if(odd2[i] &gt; max) { max = odd2[i]; } } document.write(&apos;上面数组所有奇数中最大的奇数为&apos;+max+&quot;&lt;br&gt;&quot;); 整合代码如下： function oddMax() { var odd = []; for(var i = 0; i &lt; 20; i++) { odd[i] = parseInt(Math.random()*100); document.write(&apos;给定一个随机数字组成的数组&apos;+&quot;[&quot;+odd[i]+&quot;]&quot;+&quot;&lt;br&gt;&quot;); } var odd2 = []; for(i = 0; i &lt; odd.length; i++) { if(odd[i] % 2 != 0) { odd2.push(odd[i]); } } var max = 0; for(i = 0;i &lt; odd2.length; i++) { if(odd2[i] &gt; max) { max = odd2[i]; } } return max; } oddMax(); 总结2： 随机数 选取数组中的奇数 数组内数与数的比较 给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串如‘abcdfasdfjkflkwerkjdskfjskdjflklasdfldf’; ，统计 字符d 的个数，并将其中的 d 用s全部替换 function matchStr(str) { var reg =/d/g; var len= str.match(reg).length; console.log(&apos;d出现的个数是&apos; + len); return str.replace(/d/g,&quot;s&quot;); } a = &apos;abcdfasdfjkflkwerkjdskfjskdjflklasdfldf&apos;; matchStr(a); 总结3： 正则表达式匹配]]></content>
       <categories>
         <category>javascript</category>
       </categories>
@@ -44,8 +44,8 @@
         <category>html</category>
       </categories>
       <tags>
-        <tag>基础</tag>
         <tag>html</tag>
+        <tag>基础</tag>
       </tags>
   </entry>
   <entry>
@@ -56,8 +56,8 @@
         <category>html</category>
       </categories>
       <tags>
-        <tag>html5</tag>
         <tag>基础</tag>
+        <tag>html5</tag>
       </tags>
   </entry>
   <entry>
@@ -68,8 +68,8 @@
         <category>html</category>
       </categories>
       <tags>
-        <tag>基础</tag>
         <tag>html</tag>
+        <tag>基础</tag>
       </tags>
   </entry>
   <entry>
