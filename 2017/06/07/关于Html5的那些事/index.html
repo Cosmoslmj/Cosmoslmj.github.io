@@ -96,7 +96,7 @@
 <meta property="og:url" content="http://cosmoslmj.com/2017/06/07/关于Html5的那些事/index.html">
 <meta property="og:site_name" content="小君前端学习">
 <meta property="og:description" content="video video元素可以放多个source元素，浏览器会识别第一个有效的视频文件地址 video可以通过Dom操作进行设置相应的播放、暂停、t停止、宽度调节等。主要通过play()  /  pause()  load()  paused / width   function playPause(){if (myVideo.paused)  myVideo.play();else  myVid">
-<meta property="og:updated_time" content="2017-06-07T05:28:03.356Z">
+<meta property="og:updated_time" content="2017-06-08T02:20:10.581Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Html5的那些事《一》">
 <meta name="twitter:description" content="video video元素可以放多个source元素，浏览器会识别第一个有效的视频文件地址 video可以通过Dom操作进行设置相应的播放、暂停、t停止、宽度调节等。主要通过play()  /  pause()  load()  paused / width   function playPause(){if (myVideo.paused)  myVideo.play();else  myVid">
@@ -448,7 +448,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> c=<span class="built_in">document</span>.getElementById(<span class="string">"myCanvas"</span>);</div><div class="line"><span class="keyword">var</span> cxt=c.getContext(<span class="string">"2d"</span>);</div><div class="line">cxt.fillStyle=<span class="string">"#FF0000"</span>;</div><div class="line">cxt.beginPath(); <span class="comment">//开始路径</span></div><div class="line">cxt.arc(<span class="number">70</span>,<span class="number">18</span>,<span class="number">15</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">true</span>);</div><div class="line">cxt.closePath(); <span class="comment">//结束路径</span></div><div class="line">cxt.fill();</div></pre></td></tr></table></figure>
 <p><strong> arc(定义一个中心点，半径，起始角度，结束角度，绘图方向布尔值)  </strong><br>上面代码解析：<br>定义了一个圆心坐标是：（70,18）半径是：15 起始位置是：0 PI  沿顺时针（0 PI  0.5 PI 1 PI 1.5 PI）Math.PI * 2 就是整个圆   true:顺方向 false:逆方向</p>
 <h3 id="SVG"><a href="#SVG" class="headerlink" title="SVG"></a>SVG</h3><p>SVG和Canvas都允许在浏览器创建图像，但两者在根本上不同</p>
-<p>SVG：<br>        是一种使用 <strong>XML描述</strong>2D图形的语言，基于XML，意味着SVG DOM中的每个元素都可以用，可以给某个元素添加Js时间处理器，每个绘制的图形都被看做是对象，如果SVG的属性发生编发，浏览器会自动重现图形。</p>
+<p>SVG：<br>        是一种使用 <strong>XML描述</strong>2D图形的语言，基于XML，意味着SVG DOM中的每个元素都可以用，可以给某个元素添加Js事件处理器，每个绘制的图形都被看做是对象，如果SVG的属性发生编发，浏览器会自动重现图形。</p>
 <hr>
 <p>Canvas:<br>        是通过<strong>js来描绘</strong>2D图形，逐像素渲染，一旦绘制，浏览器就不关注了，如果它的位置有变化，整个场景都要重新绘制，包括任何或许已被图形覆盖的对象。</p>
 <hr>
@@ -603,7 +603,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -614,7 +614,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -625,7 +625,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

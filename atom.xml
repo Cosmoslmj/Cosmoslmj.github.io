@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://cosmoslmj.com/"/>
-  <updated>2017-06-07T08:00:09.368Z</updated>
+  <updated>2017-06-09T09:11:26.827Z</updated>
   <id>http://cosmoslmj.com/</id>
   
   <author>
@@ -14,6 +14,74 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>说说学习javascript做过的那些小例子</title>
+    <link href="http://cosmoslmj.com/2017/06/09/%E8%AF%B4%E8%AF%B4%E5%AD%A6%E4%B9%A0javascript%E5%81%9A%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%B0%8F%E4%BE%8B%E5%AD%90/"/>
+    <id>http://cosmoslmj.com/2017/06/09/说说学习javascript做过的那些小例子/</id>
+    <published>2017-06-09T08:41:21.000Z</published>
+    <updated>2017-06-09T09:11:26.827Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-给定一个随机数字组成的数组，选取其中的偶数，并排序，-返回新数组；"><a href="#1-给定一个随机数字组成的数组，选取其中的偶数，并排序，-返回新数组；" class="headerlink" title="1.给定一个随机数字组成的数组，选取其中的偶数，并排序， 返回新数组；"></a>1.给定一个随机数字组成的数组，选取其中的偶数，并排序， 返回新数组；</h2><h3 id="定义一个随机数组"><a href="#定义一个随机数组" class="headerlink" title="定义一个随机数组"></a>定义一个随机数组</h3><pre><code>var arr = [];
+for(var i = 0; i &lt; 50; i++) {
+    arr[i] = parseInt(Math.random()*50);
+}
+var cl = arr.join(&apos;,&apos;);
+document.write(&apos;给定一个随机数字组成的数组&apos;+&quot;[&quot;+cl+&quot;]&quot;+&quot;&lt;br&gt;&quot;);
+</code></pre><h3 id="判断数组中偶数"><a href="#判断数组中偶数" class="headerlink" title="判断数组中偶数"></a>判断数组中偶数</h3><pre><code>var arr2 = [];
+for(var i = 0; i &lt; arr.length; i++) {
+    if(arr[i] % 2 === 0) {
+        arr2.push(arr[i]);
+    }
+}
+</code></pre><h3 id="给这些偶数升序排序"><a href="#给这些偶数升序排序" class="headerlink" title="给这些偶数升序排序"></a>给这些偶数升序排序</h3><pre><code>arr2.sort(function sortNumber(a,b) {
+    return a-b;
+})
+document.write(&quot;选出上面数组的偶数并将其升序排序后这个新数组是&quot;+&quot;[&quot;+arr2+&quot;]&quot;+&quot;&lt;br&gt;&quot;);
+</code></pre><h3 id="给这些偶数升序排序后去重"><a href="#给这些偶数升序排序后去重" class="headerlink" title="给这些偶数升序排序后去重"></a>给这些偶数升序排序后去重</h3><pre><code>function find() {
+var arr3 = [];
+for(var i = 0; i &lt; arr2.length; i++) {
+    if(arr3.indexOf(arr2[i]) &lt; 0) {
+        arr3.push(arr2[i]);
+    }
+}
+document.write(&quot;给上面的数组去重后新数组是&quot;+&quot;[&quot;+arr3+&quot;]&quot;+&quot;&lt;br&gt;&quot;);
+}
+find(arr2);
+</code></pre><h3 id="给这些偶数降序排序"><a href="#给这些偶数降序排序" class="headerlink" title="给这些偶数降序排序"></a>给这些偶数降序排序</h3><pre><code>var arr4 = [];
+for(var i = 0; i &lt; arr.length; i++) {
+    if(arr[i] % 2 === 0) {
+    arr4.push(arr[i]);
+    }
+}
+arr4.sort(function sortNumber(a,b) {
+return b-a;
+});
+document.write(&quot;选出上面数组的偶数并将其降序排序后这个新数组是&quot;+&quot;[&quot;+arr4+&quot;]&quot;+&quot;&lt;br&gt;&quot;);
+</code></pre><hr>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><ol>
+<li>随机数：parseInt(Math).random() —&gt;范围是0-1的整数， parseInt(Math).random()*50—&gt;范围是0-50的整数</li>
+<li>arr.join(‘,’) 把数组内的数用‘,’连接</li>
+<li>arr2.push(arr[i]) 遍历arr把arr的内容放到arr2中</li>
+<li>数组升序与降序方法：              arr.sort(function sortNumber(a,b)) { return a - b ;})      <strong>a-b是升序  b-a是降序</strong></li>
+<li>去重 arr3.indexOf(arr2[i] &lt; 0)</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-给定一个随机数字组成的数组，选取其中的偶数，并排序，-返回新数组；&quot;&gt;&lt;a href=&quot;#1-给定一个随机数字组成的数组，选取其中的偶数，并排序，-返回新数组；&quot; class=&quot;headerlink&quot; title=&quot;1.给定一个随机数字组成的数组，选取其中的偶
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://cosmoslmj.com/categories/javascript/"/>
+    
+    
+      <category term="基础" scheme="http://cosmoslmj.com/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="javascript" scheme="http://cosmoslmj.com/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>关于Html5的那些事《二》</title>
@@ -83,7 +151,7 @@
     <link href="http://cosmoslmj.com/2017/06/07/%E5%85%B3%E4%BA%8EHtml5%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
     <id>http://cosmoslmj.com/2017/06/07/关于Html5的那些事/</id>
     <published>2017-06-07T00:24:04.000Z</published>
-    <updated>2017-06-07T05:28:03.356Z</updated>
+    <updated>2017-06-08T02:20:10.581Z</updated>
     
     <content type="html"><![CDATA[<h3 id="video"><a href="#video" class="headerlink" title="video"></a>video</h3><ul>
 <li>video元素可以放多个source元素，浏览器会识别第一个有效的视频文件地址</li>
@@ -120,7 +188,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> c=<span class="built_in">document</span>.getElementById(<span class="string">"myCanvas"</span>);</div><div class="line"><span class="keyword">var</span> cxt=c.getContext(<span class="string">"2d"</span>);</div><div class="line">cxt.fillStyle=<span class="string">"#FF0000"</span>;</div><div class="line">cxt.beginPath(); <span class="comment">//开始路径</span></div><div class="line">cxt.arc(<span class="number">70</span>,<span class="number">18</span>,<span class="number">15</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">true</span>);</div><div class="line">cxt.closePath(); <span class="comment">//结束路径</span></div><div class="line">cxt.fill();</div></pre></td></tr></table></figure>
 <p><strong> arc(定义一个中心点，半径，起始角度，结束角度，绘图方向布尔值)  </strong><br>上面代码解析：<br>定义了一个圆心坐标是：（70,18）半径是：15 起始位置是：0 PI  沿顺时针（0 PI  0.5 PI 1 PI 1.5 PI）Math.PI * 2 就是整个圆   true:顺方向 false:逆方向</p>
 <h3 id="SVG"><a href="#SVG" class="headerlink" title="SVG"></a>SVG</h3><p>SVG和Canvas都允许在浏览器创建图像，但两者在根本上不同</p>
-<p>SVG：<br>        是一种使用 <strong>XML描述</strong>2D图形的语言，基于XML，意味着SVG DOM中的每个元素都可以用，可以给某个元素添加Js时间处理器，每个绘制的图形都被看做是对象，如果SVG的属性发生编发，浏览器会自动重现图形。</p>
+<p>SVG：<br>        是一种使用 <strong>XML描述</strong>2D图形的语言，基于XML，意味着SVG DOM中的每个元素都可以用，可以给某个元素添加Js事件处理器，每个绘制的图形都被看做是对象，如果SVG的属性发生编发，浏览器会自动重现图形。</p>
 <hr>
 <p>Canvas:<br>        是通过<strong>js来描绘</strong>2D图形，逐像素渲染，一旦绘制，浏览器就不关注了，如果它的位置有变化，整个场景都要重新绘制，包括任何或许已被图形覆盖的对象。</p>
 <hr>
