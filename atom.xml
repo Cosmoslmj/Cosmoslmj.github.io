@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://cosmoslmj.com/"/>
-  <updated>2017-06-09T09:52:53.139Z</updated>
+  <updated>2017-06-09T13:59:17.817Z</updated>
   <id>http://cosmoslmj.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://cosmoslmj.com/2017/06/09/%E8%AF%B4%E8%AF%B4%E5%AD%A6%E4%B9%A0javascript%E5%81%9A%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%B0%8F%E4%BE%8B%E5%AD%90/"/>
     <id>http://cosmoslmj.com/2017/06/09/说说学习javascript做过的那些小例子/</id>
     <published>2017-06-09T08:41:21.000Z</published>
-    <updated>2017-06-09T09:52:53.139Z</updated>
+    <updated>2017-06-09T13:59:17.817Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-给定一个随机数字组成的数组，选取其中的偶数，并排序，-返回新数组；"><a href="#1-给定一个随机数字组成的数组，选取其中的偶数，并排序，-返回新数组；" class="headerlink" title="1.给定一个随机数字组成的数组，选取其中的偶数，并排序， 返回新数组；"></a>1.给定一个随机数字组成的数组，选取其中的偶数，并排序， 返回新数组；</h2><h3 id="定义一个随机数组"><a href="#定义一个随机数组" class="headerlink" title="定义一个随机数组"></a>定义一个随机数组</h3><pre><code>var arr = [];
 for(var i = 0; i &lt; 50; i++) {
