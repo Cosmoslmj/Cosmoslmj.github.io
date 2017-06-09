@@ -96,7 +96,7 @@
 <meta property="og:url" content="http://cosmoslmj.com/2017/06/09/说说学习javascript做过的那些小例子/index.html">
 <meta property="og:site_name" content="小君前端学习">
 <meta property="og:description" content="1.给定一个随机数字组成的数组，选取其中的偶数，并排序， 返回新数组；定义一个随机数组var arr = []; for(var i = 0; i &amp;lt; 50; i++) {     arr[i] = parseInt(Math.random()*50); } var cl = arr.join(&amp;apos;,&amp;apos;); document.write(&amp;apos;给定一个随机数字组成的数">
-<meta property="og:updated_time" content="2017-06-09T09:32:35.587Z">
+<meta property="og:updated_time" content="2017-06-09T09:47:30.694Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="说说学习javascript做过的那些小例子">
 <meta name="twitter:description" content="1.给定一个随机数字组成的数组，选取其中的偶数，并排序， 返回新数组；定义一个随机数组var arr = []; for(var i = 0; i &amp;lt; 50; i++) {     arr[i] = parseInt(Math.random()*50); } var cl = arr.join(&amp;apos;,&amp;apos;); document.write(&amp;apos;给定一个随机数字组成的数">
@@ -457,7 +457,8 @@ document.write(&quot;选出上面数组的偶数并将其降序排序后这个�
 <li>数组升序与降序方法：              arr.sort(function sortNumber(a,b)) { return a - b ;})      <strong>a-b是升序  b-a是降序</strong></li>
 <li>去重 arr3.indexOf(arr2[i] &lt; 0)</li>
 </ol>
-<h2 id="1-给定一个随机数字组成的数组，选取其中最大的奇数，并返回这个奇数；"><a href="#1-给定一个随机数字组成的数组，选取其中最大的奇数，并返回这个奇数；" class="headerlink" title="1.给定一个随机数字组成的数组，选取其中最大的奇数，并返回这个奇数；"></a>1.给定一个随机数字组成的数组，选取其中最大的奇数，并返回这个奇数；</h2><h3 id="随机定义一个数组"><a href="#随机定义一个数组" class="headerlink" title="随机定义一个数组"></a>随机定义一个数组</h3><pre><code>var odd = [];
+<hr>
+<h2 id="2-给定一个随机数字组成的数组，选取其中最大的奇数，并返回这个奇数；"><a href="#2-给定一个随机数字组成的数组，选取其中最大的奇数，并返回这个奇数；" class="headerlink" title="2.给定一个随机数字组成的数组，选取其中最大的奇数，并返回这个奇数；"></a>2.给定一个随机数字组成的数组，选取其中最大的奇数，并返回这个奇数；</h2><h3 id="随机定义一个数组"><a href="#随机定义一个数组" class="headerlink" title="随机定义一个数组"></a>随机定义一个数组</h3><pre><code>var odd = [];
     for(var i = 0; i &lt; 20; i++) {
     odd[i] = parseInt(Math.random()*100);
 }
@@ -499,7 +500,27 @@ document.write(&apos;上面数组所有奇数中最大的奇数为&apos;+max+&qu
     return max;
 }
 oddMax();
-</code></pre>
+</code></pre><hr>
+<h3 id="总结2："><a href="#总结2：" class="headerlink" title="总结2："></a>总结2：</h3><ol>
+<li>随机数</li>
+<li>选取数组中的奇数</li>
+<li>数组内数与数的比较</li>
+</ol>
+<hr>
+<h2 id="给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串"><a href="#给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串" class="headerlink" title="给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串"></a>给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串</h2><p><strong>如</strong>‘abcdfasdfjkflkwerkjdskfjskdjflklasdfldf’; ，统计 字符d 的个数，并将其中的 d 用s全部替换 </p>
+<pre><code> function matchStr(str) {
+    var reg =/d/g;
+    var len= str.match(reg).length;
+    console.log(&apos;d出现的个数是&apos; + len);
+    return str.replace(/d/g,&quot;s&quot;);
+}
+a = &apos;abcdfasdfjkflkwerkjdskfjskdjflklasdfldf&apos;;
+matchStr(a);
+</code></pre><hr>
+<h3 id="总结2：-1"><a href="#总结2：-1" class="headerlink" title="总结2："></a>总结2：</h3><ol>
+<li>正则表达式匹配</li>
+</ol>
+
       
     </div>
 
@@ -694,7 +715,7 @@ oddMax();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-给定一个随机数字组成的数组，选取其中的偶数，并排序，-返回新数组；"><span class="nav-text">1.给定一个随机数字组成的数组，选取其中的偶数，并排序， 返回新数组；</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义一个随机数组"><span class="nav-text">定义一个随机数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断数组中偶数"><span class="nav-text">判断数组中偶数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给这些偶数升序排序"><span class="nav-text">给这些偶数升序排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给这些偶数升序排序后去重"><span class="nav-text">给这些偶数升序排序后去重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给这些偶数降序排序"><span class="nav-text">给这些偶数降序排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结1："><span class="nav-text">总结1：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-给定一个随机数字组成的数组，选取其中最大的奇数，并返回这个奇数；"><span class="nav-text">1.给定一个随机数字组成的数组，选取其中最大的奇数，并返回这个奇数；</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#随机定义一个数组"><span class="nav-text">随机定义一个数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选取数组中的奇数"><span class="nav-text">选取数组中的奇数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选取数组中最大的奇数"><span class="nav-text">选取数组中最大的奇数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-给定一个随机数字组成的数组，选取其中的偶数，并排序，-返回新数组；"><span class="nav-text">1.给定一个随机数字组成的数组，选取其中的偶数，并排序， 返回新数组；</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义一个随机数组"><span class="nav-text">定义一个随机数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断数组中偶数"><span class="nav-text">判断数组中偶数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给这些偶数升序排序"><span class="nav-text">给这些偶数升序排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给这些偶数升序排序后去重"><span class="nav-text">给这些偶数升序排序后去重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给这些偶数降序排序"><span class="nav-text">给这些偶数降序排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结1："><span class="nav-text">总结1：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-给定一个随机数字组成的数组，选取其中最大的奇数，并返回这个奇数；"><span class="nav-text">2.给定一个随机数字组成的数组，选取其中最大的奇数，并返回这个奇数；</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#随机定义一个数组"><span class="nav-text">随机定义一个数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选取数组中的奇数"><span class="nav-text">选取数组中的奇数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选取数组中最大的奇数"><span class="nav-text">选取数组中最大的奇数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结2："><span class="nav-text">总结2：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串"><span class="nav-text">给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#总结2：-1"><span class="nav-text">总结2：</span></a></li></ol></li></ol></div>
             
 
           </div>
