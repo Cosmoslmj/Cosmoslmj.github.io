@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://cosmoslmj.com/"/>
-  <updated>2017-06-09T13:59:17.817Z</updated>
+  <updated>2017-06-10T10:03:32.990Z</updated>
   <id>http://cosmoslmj.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://cosmoslmj.com/2017/06/09/%E8%AF%B4%E8%AF%B4%E5%AD%A6%E4%B9%A0javascript%E5%81%9A%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%B0%8F%E4%BE%8B%E5%AD%90/"/>
     <id>http://cosmoslmj.com/2017/06/09/说说学习javascript做过的那些小例子/</id>
     <published>2017-06-09T08:41:21.000Z</published>
-    <updated>2017-06-09T13:59:17.817Z</updated>
+    <updated>2017-06-10T10:03:32.990Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-给定一个随机数字组成的数组，选取其中的偶数，并排序，-返回新数组；"><a href="#1-给定一个随机数字组成的数组，选取其中的偶数，并排序，-返回新数组；" class="headerlink" title="1.给定一个随机数字组成的数组，选取其中的偶数，并排序， 返回新数组；"></a>1.给定一个随机数字组成的数组，选取其中的偶数，并排序， 返回新数组；</h2><h3 id="定义一个随机数组"><a href="#定义一个随机数组" class="headerlink" title="定义一个随机数组"></a>定义一个随机数组</h3><pre><code>var arr = [];
 for(var i = 0; i &lt; 50; i++) {
@@ -127,6 +127,33 @@ matchStr(a);
 </code></pre><hr>
 <h3 id="总结3："><a href="#总结3：" class="headerlink" title="总结3："></a>总结3：</h3><ol>
 <li>正则表达式匹配</li>
+</ol>
+<hr>
+<h2 id="4-如何随机色"><a href="#4-如何随机色" class="headerlink" title="4.如何随机色"></a>4.如何随机色</h2><h3 id="用-······表示"><a href="#用-······表示" class="headerlink" title="用#······表示"></a>用#······表示</h3><pre><code>  function getCl() {
+  var arr = [];
+  var C = &apos;0123456789ABCDEF&apos;;
+  for(var i = 0; i &lt; 6; i++) {
+     var x = parseInt(Math.random() * 16);
+     var c = C.substr(x,1);
+     arr.push(c);
+  }
+  var cl = &quot;#&quot; + arr.join(&apos;&apos;);
+  return cl;
+}
+  getCl();
+</code></pre><h3 id="用rgba-表示"><a href="#用rgba-表示" class="headerlink" title="用rgba(,,,)表示"></a>用rgba(,,,)表示</h3><pre><code>function Color() {
+    this.r = Math.floor(Math.random()*255);
+    this.g = Math.floor(Math.random()*255);
+    this.b = Math.floor(Math.random()*255);
+    this.color = &apos;rgba(&apos;+ this.r +&apos;,&apos;+ this.g +&apos;,&apos;+ this.b +&apos;,0.5)&apos;;
+    return this.color;
+}
+Color();
+</code></pre><hr>
+<h3 id="总结4"><a href="#总结4" class="headerlink" title="总结4:"></a>总结4:</h3><ol>
+<li>颜色范围：0-9 A-F</li>
+<li>C.substr(x,1) 表示在C中选出下标是X的1个数</li>
+<li>用rgba表示 颜色范围是0-255 rgba(209m103,56,.5);后面的.5表示透明度 是0.5，一般都省略0</li>
 </ol>
 ]]></content>
     

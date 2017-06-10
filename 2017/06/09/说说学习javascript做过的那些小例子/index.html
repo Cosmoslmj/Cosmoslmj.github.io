@@ -96,7 +96,7 @@
 <meta property="og:url" content="http://cosmoslmj.com/2017/06/09/说说学习javascript做过的那些小例子/index.html">
 <meta property="og:site_name" content="小君前端学习">
 <meta property="og:description" content="1.给定一个随机数字组成的数组，选取其中的偶数，并排序， 返回新数组；定义一个随机数组var arr = []; for(var i = 0; i &amp;lt; 50; i++) {     arr[i] = parseInt(Math.random()*50); } var cl = arr.join(&amp;apos;,&amp;apos;); document.write(&amp;apos;给定一个随机数字组成的数">
-<meta property="og:updated_time" content="2017-06-09T13:59:17.817Z">
+<meta property="og:updated_time" content="2017-06-10T10:03:32.990Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="说说学习javascript做过的那些小例子">
 <meta name="twitter:description" content="1.给定一个随机数字组成的数组，选取其中的偶数，并排序， 返回新数组；定义一个随机数组var arr = []; for(var i = 0; i &amp;lt; 50; i++) {     arr[i] = parseInt(Math.random()*50); } var cl = arr.join(&amp;apos;,&amp;apos;); document.write(&amp;apos;给定一个随机数字组成的数">
@@ -528,6 +528,33 @@ matchStr(a);
 <h3 id="总结3："><a href="#总结3：" class="headerlink" title="总结3："></a>总结3：</h3><ol>
 <li>正则表达式匹配</li>
 </ol>
+<hr>
+<h2 id="4-如何随机色"><a href="#4-如何随机色" class="headerlink" title="4.如何随机色"></a>4.如何随机色</h2><h3 id="用-······表示"><a href="#用-······表示" class="headerlink" title="用#······表示"></a>用#······表示</h3><pre><code>  function getCl() {
+  var arr = [];
+  var C = &apos;0123456789ABCDEF&apos;;
+  for(var i = 0; i &lt; 6; i++) {
+     var x = parseInt(Math.random() * 16);
+     var c = C.substr(x,1);
+     arr.push(c);
+  }
+  var cl = &quot;#&quot; + arr.join(&apos;&apos;);
+  return cl;
+}
+  getCl();
+</code></pre><h3 id="用rgba-表示"><a href="#用rgba-表示" class="headerlink" title="用rgba(,,,)表示"></a>用rgba(,,,)表示</h3><pre><code>function Color() {
+    this.r = Math.floor(Math.random()*255);
+    this.g = Math.floor(Math.random()*255);
+    this.b = Math.floor(Math.random()*255);
+    this.color = &apos;rgba(&apos;+ this.r +&apos;,&apos;+ this.g +&apos;,&apos;+ this.b +&apos;,0.5)&apos;;
+    return this.color;
+}
+Color();
+</code></pre><hr>
+<h3 id="总结4"><a href="#总结4" class="headerlink" title="总结4:"></a>总结4:</h3><ol>
+<li>颜色范围：0-9 A-F</li>
+<li>C.substr(x,1) 表示在C中选出下标是X的1个数</li>
+<li>用rgba表示 颜色范围是0-255 rgba(209m103,56,.5);后面的.5表示透明度 是0.5，一般都省略0</li>
+</ol>
 
       
     </div>
@@ -723,7 +750,7 @@ matchStr(a);
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-给定一个随机数字组成的数组，选取其中的偶数，并排序，-返回新数组；"><span class="nav-text">1.给定一个随机数字组成的数组，选取其中的偶数，并排序， 返回新数组；</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义一个随机数组"><span class="nav-text">定义一个随机数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断数组中偶数"><span class="nav-text">判断数组中偶数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给这些偶数升序排序"><span class="nav-text">给这些偶数升序排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给这些偶数升序排序后去重"><span class="nav-text">给这些偶数升序排序后去重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给这些偶数降序排序"><span class="nav-text">给这些偶数降序排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结1："><span class="nav-text">总结1：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-给定一个随机数字组成的数组，选取其中最大的奇数，并返回这个奇数；"><span class="nav-text">2.给定一个随机数字组成的数组，选取其中最大的奇数，并返回这个奇数；</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#随机定义一个数组"><span class="nav-text">随机定义一个数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选取数组中的奇数"><span class="nav-text">选取数组中的奇数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-选取数组中最大的奇数"><span class="nav-text">3.选取数组中最大的奇数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结2："><span class="nav-text">总结2：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串"><span class="nav-text">3.给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如‘abcdfasdfjkflkwerkjdskfjskdjflklasdfldf’-，统计-字符d-的个数，并将其中的-d-用s全部替换"><span class="nav-text">如‘abcdfasdfjkflkwerkjdskfjskdjflklasdfldf’; ，统计 字符d 的个数，并将其中的 d 用s全部替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结3："><span class="nav-text">总结3：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-给定一个随机数字组成的数组，选取其中的偶数，并排序，-返回新数组；"><span class="nav-text">1.给定一个随机数字组成的数组，选取其中的偶数，并排序， 返回新数组；</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义一个随机数组"><span class="nav-text">定义一个随机数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断数组中偶数"><span class="nav-text">判断数组中偶数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给这些偶数升序排序"><span class="nav-text">给这些偶数升序排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给这些偶数升序排序后去重"><span class="nav-text">给这些偶数升序排序后去重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给这些偶数降序排序"><span class="nav-text">给这些偶数降序排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结1："><span class="nav-text">总结1：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-给定一个随机数字组成的数组，选取其中最大的奇数，并返回这个奇数；"><span class="nav-text">2.给定一个随机数字组成的数组，选取其中最大的奇数，并返回这个奇数；</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#随机定义一个数组"><span class="nav-text">随机定义一个数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选取数组中的奇数"><span class="nav-text">选取数组中的奇数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-选取数组中最大的奇数"><span class="nav-text">3.选取数组中最大的奇数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结2："><span class="nav-text">总结2：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串"><span class="nav-text">3.给定一个字符串，统计其中某个字符的个数。并且全部用另一个字符替换，返回替换后的字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如‘abcdfasdfjkflkwerkjdskfjskdjflklasdfldf’-，统计-字符d-的个数，并将其中的-d-用s全部替换"><span class="nav-text">如‘abcdfasdfjkflkwerkjdskfjskdjflklasdfldf’; ，统计 字符d 的个数，并将其中的 d 用s全部替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结3："><span class="nav-text">总结3：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-如何随机色"><span class="nav-text">4.如何随机色</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用-······表示"><span class="nav-text">用#······表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用rgba-表示"><span class="nav-text">用rgba(,,,)表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结4"><span class="nav-text">总结4:</span></a></li></ol></li></ol></div>
             
 
           </div>
