@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://cosmoslmj.com/"/>
-  <updated>2017-06-10T10:03:32.990Z</updated>
+  <updated>2017-06-17T09:08:22.113Z</updated>
   <id>http://cosmoslmj.com/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>偶遇第一波电话面试的内容</title>
+    <link href="http://cosmoslmj.com/2017/06/17/%E5%81%B6%E9%81%87%E7%AC%AC%E4%B8%80%E6%B3%A2%E7%94%B5%E8%AF%9D%E9%9D%A2%E8%AF%95%E7%9A%84%E5%86%85%E5%AE%B9/"/>
+    <id>http://cosmoslmj.com/2017/06/17/偶遇第一波电话面试的内容/</id>
+    <published>2017-06-17T08:19:04.000Z</published>
+    <updated>2017-06-17T09:08:22.113Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-你知道IE盒子模型和W3c盒子模型的区别吗？"><a href="#1-你知道IE盒子模型和W3c盒子模型的区别吗？" class="headerlink" title="1.你知道IE盒子模型和W3c盒子模型的区别吗？"></a>1.你知道IE盒子模型和W3c盒子模型的区别吗？</h2><p>标准的w3c盒子模型：包括的范围有: margin border padding content<br>                   <strong>content不包括其他部分</strong> </p>
+<p>IE盒子模型：包括的范围也是: margin border padding content<br>                   <strong>content包括了border 和 padding</strong></p>
+<p><strong>两者不同点就在W3C盒模型中，元素的宽(width) 高(height)仅仅指的是 content 区域 ，而IE盒子模型中，元素的宽(width) 高(height) 属性是由 content区域 + padding + border组成</strong></p>
+<h3 id="所以"><a href="#所以" class="headerlink" title="所以"></a>所以</h3><p><strong>W3c盒模型(标准模型)元素的总宽高：</strong></p>
+<p>width = width + left padding + right padding + left border +right border + left margin + right margin</p>
+<p>height = heifht + top padding + bottom padding + top border + bottom border + top margin + bottom margin</p>
+<hr>
+<p><strong>IE盒模型元素的总宽高：</strong></p>
+<p>width = left margin + width + right margin<br>height = top margin + height + bottom margin</p>
+<hr>
+<p>ie 6之前都是采用IE盒模型，从IE6之后开始提供一种IE使用的W3C盒模型方式： 在html中声明Doctype<br>但是IE6默认仍是IE盒子模型(quirks model模式)</p>
+<hr>
+<p>CSS3中 content-box 和 boeder-box</p>
+<p>这两个属性就是用来规定使用哪种盒模型</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">box-sizing</span>: content-box || border-box || inherit</div></pre></td></tr></table></figure>
+<p>如果设置属性值是content-box，采用的是标准盒模型<br>如果设置属性值是border-box，采用的是怪异模式下的IE盒模型<br>如果设置属性值inherit，采用继承方式</p>
+<p>实际中运用场景：<br>比如一个div容器设置了具体700px的宽度，div里面有两个子div，分别100px,600px,都设置左浮动。结果因为宽度刚好满足，两个子div会水平排列在div容器中。</p>
+<p><strong>顾客新需求</strong>：给子div添加border</p>
+<p>此时，因为默认状态下是采用标准模式，两div都设置了border，他们实际的宽等于width + left border + right border ，就会超过父容器，此时会导致换行</p>
+<p><strong>解决办法：</strong></p>
+<p>给子div加上box-sizing: border-box (ie8开始支持)</p>
+<hr>
+<h2 id="如何做到垂直水平居中"><a href="#如何做到垂直水平居中" class="headerlink" title="如何做到垂直水平居中"></a>如何做到垂直水平居中</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-你知道IE盒子模型和W3c盒子模型的区别吗？&quot;&gt;&lt;a href=&quot;#1-你知道IE盒子模型和W3c盒子模型的区别吗？&quot; class=&quot;headerlink&quot; title=&quot;1.你知道IE盒子模型和W3c盒子模型的区别吗？&quot;&gt;&lt;/a&gt;1.你知道IE盒子模型和W3
+    
+    </summary>
+    
+      <category term="面试" scheme="http://cosmoslmj.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="http://cosmoslmj.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>说说学习javascript做过的那些小例子</title>
