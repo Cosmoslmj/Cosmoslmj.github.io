@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://cosmoslmj.com/"/>
-  <updated>2017-06-17T09:08:22.113Z</updated>
+  <updated>2017-06-17T13:59:24.466Z</updated>
   <id>http://cosmoslmj.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://cosmoslmj.com/2017/06/17/%E5%81%B6%E9%81%87%E7%AC%AC%E4%B8%80%E6%B3%A2%E7%94%B5%E8%AF%9D%E9%9D%A2%E8%AF%95%E7%9A%84%E5%86%85%E5%AE%B9/"/>
     <id>http://cosmoslmj.com/2017/06/17/偶遇第一波电话面试的内容/</id>
     <published>2017-06-17T08:19:04.000Z</published>
-    <updated>2017-06-17T09:08:22.113Z</updated>
+    <updated>2017-06-17T13:59:24.466Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-你知道IE盒子模型和W3c盒子模型的区别吗？"><a href="#1-你知道IE盒子模型和W3c盒子模型的区别吗？" class="headerlink" title="1.你知道IE盒子模型和W3c盒子模型的区别吗？"></a>1.你知道IE盒子模型和W3c盒子模型的区别吗？</h2><p>标准的w3c盒子模型：包括的范围有: margin border padding content<br>                   <strong>content不包括其他部分</strong> </p>
 <p>IE盒子模型：包括的范围也是: margin border padding content<br>                   <strong>content包括了border 和 padding</strong></p>
@@ -38,13 +38,129 @@
 <p>这两个属性就是用来规定使用哪种盒模型</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">box-sizing</span>: content-box || border-box || inherit</div></pre></td></tr></table></figure>
 <p>如果设置属性值是content-box，采用的是标准盒模型<br>如果设置属性值是border-box，采用的是怪异模式下的IE盒模型<br>如果设置属性值inherit，采用继承方式</p>
-<p>实际中运用场景：<br>比如一个div容器设置了具体700px的宽度，div里面有两个子div，分别100px,600px,都设置左浮动。结果因为宽度刚好满足，两个子div会水平排列在div容器中。</p>
+<p><strong>实际中运用场景：</strong><br>比如一个div容器设置了具体700px的宽度，div里面有两个子div，分别100px,600px,都设置左浮动。结果因为宽度刚好满足，两个子div会水平排列在div容器中。</p>
 <p><strong>顾客新需求</strong>：给子div添加border</p>
 <p>此时，因为默认状态下是采用标准模式，两div都设置了border，他们实际的宽等于width + left border + right border ，就会超过父容器，此时会导致换行</p>
 <p><strong>解决办法：</strong></p>
 <p>给子div加上box-sizing: border-box (ie8开始支持)</p>
 <hr>
-<h2 id="如何做到垂直水平居中"><a href="#如何做到垂直水平居中" class="headerlink" title="如何做到垂直水平居中"></a>如何做到垂直水平居中</h2>]]></content>
+<h2 id="2-如何做到垂直水平居中"><a href="#2-如何做到垂直水平居中" class="headerlink" title="2.如何做到垂直水平居中"></a>2.如何做到垂直水平居中</h2><p>首先先了解CSS布局(layout)分为以下几块内容：</p>
+<ul>
+<li><p>盒子内部的布局</p>
+<ul>
+<li>文本布局(text)</li>
+<li>盒模型本身的布局(box)</li>
+</ul>
+</li>
+<li><p>盒子与盒子之间的布局(visual formatting)</p>
+<ul>
+<li><p><strong>脱离</strong>文档流(正常流normol flow)的盒子布局</p>
+<ul>
+<li>float(浮动)上下文下的布局</li>
+<li>absolute(绝对定位)上下文下的布局</li>
+</ul>
+<ul>
+<li>处于正常文档流(normol flow)的盒子布局<ul>
+<li>BFC(Block Formatting Context块级格式化上下文)布局</li>
+<li>IFC(Inline Formatting Contexts行内(内联)格式化上下文中)布局</li>
+<li>FFC(Flex Formatting Contexts自适应格式化上下文)布局</li>
+<li>table上下文布局</li>
+<li>css grid上下文布局 (GFC)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>当问到如何关于CSS布局，做到垂直水平居中的时候需要从上面涉及到的CSS布局模块来考虑。</p>
+<hr>
+<p><strong>1.文本居中的方式</strong>：height 和line height 相等 text-align:center</p>
+<p>html:</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">"container"</span>&gt;</div><div class="line">&lt;span&gt;我可以水平居中&lt;/span&gt;</div><div class="line">&lt;/<span class="keyword">div</span>&gt;</div></pre></td></tr></table></figure>
+<p>css:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">* &#123;</div><div class="line"><span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line"><span class="attribute">padding</span>: <span class="number">0</span></div><div class="line">&#125;</div><div class="line"><span class="selector-class">.container</span> &#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">500px</span>;</div><div class="line">    <span class="attribute">line-height</span>: <span class="number">500px</span>;</div><div class="line">    <span class="attribute">text-align</span>: center;</div><div class="line">    <span class="attribute">background-color</span>: <span class="number">#f00</span>;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">40px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">或者</div><div class="line"><span class="selector-class">.container</span> &#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">500px</span>;</div><div class="line">    <span class="attribute">display</span>:table-cell;</div><div class="line">    <span class="attribute">text-align</span>: center;</div><div class="line">    <span class="attribute">background-color</span>: <span class="number">#f00</span>;</div><div class="line">    <span class="attribute">vertical-align</span>: middle;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>第一个没写宽度会宽度100%显示，文字位于中间，第二个文字宽度就是显示的宽度<br><strong>优点：</strong></p>
+<ul>
+<li>适合所有浏览</li>
+</ul>
+<p><strong>缺点：</strong></p>
+<ul>
+<li>只适合行内元素单行文本水平垂直居中。比如按钮中的文字</li>
+</ul>
+<p>器</p>
+<p><strong>2. 利用盒模型的</strong>水平垂直居中<br>块级盒(block-level box)里面包含：<br>content-box padding-box border-box margin-box</p>
+<p>  <strong>里面的盒子位于外面盒子水平垂直居中padding</strong></p>
+<p>html:</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">"container"</span>&gt;</div><div class="line"> &lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">"box"</span>&gt;&lt;/<span class="keyword">div</span>&gt;</div><div class="line">&lt;/<span class="keyword">div</span>&gt;</div></pre></td></tr></table></figure>
+<p>css:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">* &#123;</div><div class="line"><span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line"><span class="attribute">padding</span>: <span class="number">0</span></div><div class="line">&#125;</div><div class="line"><span class="selector-class">.container</span>&#123;</div><div class="line">  <span class="attribute">margin-left</span>: auto;</div><div class="line">  <span class="attribute">margin-right</span>: auto;</div><div class="line">  <span class="attribute">margin-top</span>: <span class="number">100px</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">400px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">400px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#f00</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">150px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#f1f1f1</span>;</div><div class="line">  <span class="attribute">background-clip</span>:content-box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>主要是 <strong>padding = (container.width - box.width)/2</strong></p>
+<p><strong>margin</strong></p>
+<p>html:</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">"container"</span>&gt;</div><div class="line"> &lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">"box"</span>&gt;&lt;/<span class="keyword">div</span>&gt;</div><div class="line">&lt;/<span class="keyword">div</span>&gt;</div></pre></td></tr></table></figure>
+<p>css</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">	* &#123;</div><div class="line">		<span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">		<span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line"><span class="selector-class">.container</span>&#123;</div><div class="line">  <span class="attribute">overflow</span>: hidden;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">500px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#f00</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">  <span class="attribute">margin-left</span>: auto;</div><div class="line">  <span class="attribute">margin-right</span>: auto;</div><div class="line">  <span class="attribute">width</span>:<span class="number">100px</span>;</div><div class="line">  <span class="attribute">height</span>:<span class="number">100px</span>;</div><div class="line">  <span class="attribute">margin-top</span>:<span class="number">200px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#f1f1f1</span>;</div></pre></td></tr></table></figure>
+<p>主要 <strong>margin-top = (container.height - box.height)/2</strong>  需要知道元素的宽度。</p>
+<p><strong>3.块状元素水平居中</strong></p>
+<p>html:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">'container'</span>&gt;</div><div class="line">		&lt;<span class="selector-tag">div</span> class = <span class="string">'box'</span>&gt;#我是居中的盒子&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>css</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">	* &#123;</div><div class="line">		<span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">		<span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line"><span class="selector-class">.container</span>&#123;</div><div class="line">  <span class="attribute">height</span>: <span class="number">500px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#f00</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">  <span class="attribute">width</span>:<span class="number">100px</span>;</div><div class="line">  <span class="attribute">height</span>:<span class="number">100px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#f1f1f1</span>;</div></pre></td></tr></table></figure>
+<p><strong>4.多个块元素水平居中</strong></p>
+<p>法一：</p>
+<p><strong>margin : 0 auto</strong></p>
+<p>html<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">'container'</span>&gt;</div><div class="line">		&lt;<span class="selector-tag">div</span> class = <span class="string">'box'</span>&gt;#我是居中的盒子&lt;/div&gt;</div><div class="line">		&lt;<span class="selector-tag">div</span> class = <span class="string">'box'</span>&gt;#我是居中的盒子&lt;/div&gt;</div><div class="line">		&lt;<span class="selector-tag">div</span> class = <span class="string">'box'</span>&gt;#我是居中的盒子&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>css</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">	* &#123;</div><div class="line">		<span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">		<span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line"><span class="selector-class">.container</span>&#123;</div><div class="line">  <span class="attribute">height</span>: <span class="number">500px</span>;</div><div class="line">  <span class="attribute">text-align</span>: center;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">  <span class="attribute">display</span>: inline-block;</div><div class="line">  <span class="attribute">width</span>:<span class="number">100px</span>;</div><div class="line">  <span class="attribute">height</span>:<span class="number">100px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#f1f1f1</span>;</div></pre></td></tr></table></figure>
+<p>法二：</p>
+<p><strong>使用flexbox</strong> </p>
+<ul>
+<li>flex是css3的一个新布局</li>
+<li>设置某元素是flexbox布局，只需要设置它的display：flex<br>flexbox默认是块级元素，如果定义为行内级元素设置display: inline-flex</li>
+<li>设置display的属性得到一个伸缩容器，因为flexbox由伸缩容器和伸缩项目组成。每一个被设置为flex的元素，它的内部元素都将变成一个flex伸缩项目。</li>
+</ul>
+<p>html<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">'container'</span>&gt;</div><div class="line">		&lt;<span class="selector-tag">div</span> class = <span class="string">'box'</span>&gt;#我是居中的盒子&lt;/div&gt;</div><div class="line">		&lt;<span class="selector-tag">div</span> class = <span class="string">'box'</span>&gt;#我是居中的盒子&lt;/div&gt;</div><div class="line">		&lt;<span class="selector-tag">div</span> class = <span class="string">'box'</span>&gt;#我是居中的盒子&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>css</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">	* &#123;</div><div class="line">		margin: 0;</div><div class="line">		padding: 0;</div><div class="line">	&#125;</div><div class="line">.container&#123;</div><div class="line">  height: 500px;</div><div class="line">  background-color:#f2f2f2;</div><div class="line">  display:flex;</div><div class="line">&#125;</div><div class="line">.box&#123;</div><div class="line">  margin:auto;//盒子间距</div><div class="line">  width:100px;</div><div class="line">  height:100px;</div><div class="line">  display:flex;//让我是居中的盒子这几个字居中</div><div class="line">  align-items: center;</div><div class="line">  justify-content: center;</div><div class="line">  background-color: #f1f1f1;</div></pre></td></tr></table></figure>
+<p><strong>5. 已知需要被垂直居中高度宽度的元素做水平垂直居中</strong></p>
+<p><strong>利用绝对定位absolute和负边距实现</strong></p>
+<p>html:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">'container'</span>&gt;</div><div class="line">		&lt;<span class="selector-tag">div</span> class = <span class="string">'box'</span>&gt;#我是居中的盒子&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>css:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">* &#123;</div><div class="line">		<span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">		<span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line"><span class="selector-class">.container</span>&#123;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">  <span class="attribute">width</span>: <span class="number">500px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">600px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#f00</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">  <span class="attribute">width</span>:<span class="number">100px</span>;</div><div class="line">  <span class="attribute">height</span>:<span class="number">100px</span>;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">top</span>:<span class="number">50%</span>;</div><div class="line">  <span class="attribute">left</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">margin</span>:-<span class="number">50px</span> <span class="number">0</span> <span class="number">0</span> -<span class="number">50px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#f1f1f1</span>;</div></pre></td></tr></table></figure>
+<p>如果container没有设置相对定位relative box会位于浏览器中间。</p>
+<p><strong>利用absolute和margin实现</strong></p>
+<p>html:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">'container'</span>&gt;</div><div class="line">		&lt;<span class="selector-tag">div</span> class = <span class="string">'box'</span>&gt;#我是居中的盒子&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>css:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">	* &#123;</div><div class="line">		<span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">		<span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line"><span class="selector-class">.container</span>&#123;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">  <span class="attribute">width</span>: <span class="number">500px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">500px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#f00</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">margin</span>:auto;</div><div class="line">  <span class="attribute">top</span>:<span class="number">0</span>;</div><div class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">30px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">30px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#f1f1f1</span>;</div></pre></td></tr></table></figure>
+<p>6.利用CSS3的transform，在位置元素的高宽下实现元素垂直居中</p>
+<p>html:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">'container'</span>&gt;</div><div class="line">		&lt;<span class="selector-tag">div</span> class = <span class="string">'box'</span>&gt;#我是居中的盒子&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>css:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">	* &#123;</div><div class="line">		<span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">		<span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line"><span class="selector-class">.container</span>&#123;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">  <span class="attribute">height</span>: <span class="number">500px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#f00</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">left</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">transform</span>: <span class="built_in">translate</span>(-50%, -50%);</div><div class="line">  <span class="attribute">width</span>: <span class="number">30px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">30px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#f1f1f1</span>;</div></pre></td></tr></table></figure>
+<p><strong>注意</strong><br>使用CSS3的flex和transform的时候需要考虑兼容问题。如需要加上-webkit-flex </p>
+<h2 id="3-position有哪些属性？这些属性哪一个不位于文档流？如果一个元素设置了absolute，它是以谁为参考点？"><a href="#3-position有哪些属性？这些属性哪一个不位于文档流？如果一个元素设置了absolute，它是以谁为参考点？" class="headerlink" title="3.position有哪些属性？这些属性哪一个不位于文档流？如果一个元素设置了absolute，它是以谁为参考点？"></a>3.position有哪些属性？这些属性哪一个不位于文档流？如果一个元素设置了absolute，它是以谁为参考点？</h2><p>所谓的文档流，指的是元素排版布局过程中，元素会自动从左往右，从上往下的流式排列。并最终窗体自上而下分成一行行,并在每行中按从左至右的顺序排放元素。</p>
+<p>脱离文档流：元素打乱了排列<br>position的属性有：absolute relative normal fixed static</p>
+<p>absolute fixed 会将元素从排版中拿走而脱离文档流。当然除了这个，给元素设置float也会脱离文档流</p>
+<p>absolute:以最近具有定位属性(position)的父元素为基准进行定位，脱离标准文档流,如果绝对定位（position属性的值为absolute）的元素没有“positioned”祖先元素，或者 position:static 那么它是相对于文档的 body 元素，并且它会随着页面滚动而移动</p>
+<p>fixed：以html为基准相对于视窗来定位,即便页面滚动，它还是会停留在相同的位置<br>relative:相对原有的位置进行偏移，仍然处在文档流当中</p>
+<h2 id="4-你听过CSS的BRM规范么？说说看？"><a href="#4-你听过CSS的BRM规范么？说说看？" class="headerlink" title="4.你听过CSS的BRM规范么？说说看？"></a>4.你听过CSS的BRM规范么？说说看？</h2><p>因为css命名不规范会在后期修改的时候带来很多问题。<br>优势：看class名字就知道该功能是做什么，了解各模块间的关系</p>
+<p>BEM规范：块(block)、元素(element)、修饰符(modifier)的缩写。利用不同的区块，功能与样式给元素命名。这三部分使用__ 与–连接。</p>
+<p>命名规则如下：</p>
+<ul>
+<li>.block{}  代表更高级的抽象或组件 </li>
+<li>.block__elment{} 代表block的后代</li>
+<li>.block–modifier{} 代表不同状态或者不同版本</li>
+</ul>
+<p>例如具体的：</p>
+<p>.menu{}<br>.menu<strong>item{}<br>.menu–disabled{}<br>.menu</strong>item–disable{}<br>.menu__item–first–disable{}</p>
+<p>很容易看出：顶级块是menu,它有一些元素item,item又有一些特性first ，first又有一些特性disable</p>
+<h2 id="5-你听过圣杯布局和双飞翼布局吗？说说看"><a href="#5-你听过圣杯布局和双飞翼布局吗？说说看" class="headerlink" title="5.你听过圣杯布局和双飞翼布局吗？说说看"></a>5.你听过圣杯布局和双飞翼布局吗？说说看</h2><ul>
+<li>参考文档链接：<br>(<a href="http://div.io/topic/1155" target="_blank" rel="external">http://div.io/topic/1155</a>)<br>(<a href="https://juejin.im/entry/58e605d80ce46300584a1afb" target="_blank" rel="external">https://juejin.im/entry/58e605d80ce46300584a1afb</a>)<br>(<a href="http://www.cnblogs.com/coco1s/p/4444383.html" target="_blank" rel="external">http://www.cnblogs.com/coco1s/p/4444383.html</a>)<br>(<a href="http://zh.learnlayout.com/position.html" target="_blank" rel="external">http://zh.learnlayout.com/position.html</a>)</li>
+</ul>
+]]></content>
     
     <summary type="html">
     
