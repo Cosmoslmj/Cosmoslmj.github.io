@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://cosmoslmj.com/"/>
-  <updated>2017-06-18T08:21:58.865Z</updated>
+  <updated>2017-07-07T10:28:11.671Z</updated>
   <id>http://cosmoslmj.com/</id>
   
   <author>
@@ -14,6 +14,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://cosmoslmj.com/2017/07/07/%E5%85%B3%E4%BA%8E%E6%80%8E%E4%B9%88%E4%B8%80%E6%AD%A5%E6%AD%A5%E6%8A%8Avue%E9%A1%B9%E7%9B%AE%E5%8F%91%E5%B8%83%E5%88%B0github%E5%B9%B6%E5%88%A9%E7%94%A8github-page%E8%BF%9B%E8%A1%8C%E5%9C%A8%E7%BA%BF%E6%BC%94%E7%A4%BA%E8%87%AA%E5%B7%B1%E9%A1%B9%E7%9B%AE%E7%9A%84%E8%AE%B0%E5%BD%95/"/>
+    <id>http://cosmoslmj.com/2017/07/07/关于怎么一步步把vue项目发布到github并利用github-page进行在线演示自己项目的记录/</id>
+    <published>2017-07-07T09:37:47.602Z</published>
+    <updated>2017-07-07T10:28:11.671Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>title: 关于怎么一步步把vue项目发布到github并利用github-pages进行在线演示自己项目的记录<br>categories:  vue<br>tags: </p>
+<ul>
+<li>github</li>
+<li>webpack</li>
+<li>vue</li>
+<li>github pages</li>
+</ul>
+<hr>
+<p>第一次把自己做的项目利用github pages 进行展示，查阅了相关资料，文档终于搞定了。。。前提是已经有自己的github静态博客的情况。</p>
+<ul>
+<li>vue项目<code>npm run dev</code> 已经可以成功运行的情况下</li>
+<li><p>利用<code>npm run build</code>对项目进行编译前需要做<br>  1.查看 .gitignore文件，看是否存在dist/ ，存在需要删除，这样后面build 才会成功<br>  2.进入config文件里面找到index.js文件，把build里面的assetsPublicPath:更改为<strong>‘./ ‘</strong></p>
+</li>
+<li><p>完成上面两步奏，就可以开始编译打包项目啦.npm run build</p>
+</li>
+<li>打包完会在项目中生成一个dist文件，这个文件就是上线需要的文件，里面有css文件/js文件/index.html，这个时候用浏览器打开dist里面的index.html文件便可以展示出你项目的效果</li>
+<li>接下来就是发布到远程github上。</li>
+<li>在你之前有提交过github的情况下，只要依次运行<code>git add **.**</code>  <code>git commit -m &quot;描述你所做的操作&quot;</code> <code>git push -u origin master</code> 即可。如果没有提交过github情况，可以先查看相关文档，看如何提交。</li>
+<li>接下来就是利用github page 了，经过查阅，最方便的方法就是运行完前面的操作之后，执行下面这条命令即可: <code>git subtree push --prefix=dist origin gh-pages</code>   意思是把指定的dist文件提交到gh-pages分支上，等待。刷新github 去到项目里面点开Settings，下拉看到github pages里面多了一个链接，这个链接就是你展示demo的链接啦。</li>
+</ul>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title=". 参考链接"></a>. 参考链接</h3><p> <a href="https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/" target="_blank" rel="external">https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/</a><br> <a href="http://blog.csdn.net/osdfhv/article/details/60968274" target="_blank" rel="external">http://blog.csdn.net/osdfhv/article/details/60968274</a><br> <a href="https://segmentfault.com/q/1010000007913675?_ea=1490992" target="_blank" rel="external">https://segmentfault.com/q/1010000007913675?_ea=1490992</a></p>
+<h3 id="我的demo链接"><a href="#我的demo链接" class="headerlink" title="我的demo链接"></a>我的demo链接</h3><ul>
+<li><a href="http://cosmoslmj.com/Toutiao-Vue2.0/">http://cosmoslmj.com/Toutiao-Vue2.0/</a> </li>
+<li><a href="http://cosmoslmj.com/Youkuvue2.0/#/">http://cosmoslmj.com/Youkuvue2.0/#/</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;title: 关于怎么一步步把vue项目发布到github并利用github-pages进行在线演示自己项目的记录&lt;br&gt;categories:  vue&lt;br&gt;tags: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;github&lt;/li&gt;
+&lt;li&gt;webpack&lt;/li&gt;
+&lt;l
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>偶遇第一波电话面试的内容</title>
@@ -513,9 +562,9 @@ Color();
       <category term="html" scheme="http://cosmoslmj.com/categories/html/"/>
     
     
-      <category term="html" scheme="http://cosmoslmj.com/tags/html/"/>
-    
       <category term="基础" scheme="http://cosmoslmj.com/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="html" scheme="http://cosmoslmj.com/tags/html/"/>
     
   </entry>
   
@@ -666,9 +715,9 @@ header/section/footer/aside/article/footer这几个标签最好不要嵌套在�
       <category term="html" scheme="http://cosmoslmj.com/categories/html/"/>
     
     
-      <category term="html" scheme="http://cosmoslmj.com/tags/html/"/>
-    
       <category term="基础" scheme="http://cosmoslmj.com/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="html" scheme="http://cosmoslmj.com/tags/html/"/>
     
   </entry>
   
